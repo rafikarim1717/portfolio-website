@@ -22,6 +22,7 @@ const projects = [
     image: "/Ikonoa.png",
     category: "Company Profile",
     tags: ["Insurance Tech", "Next.js"],
+    link: "https://www.ikonoa.com/",
   },
   {
     id: 3,
@@ -31,6 +32,7 @@ const projects = [
     image: "https://placehold.co/800x500/0f1cb3/ffffff?text=Wisma52",
     category: "Business Profile",
     tags: ["Nextjs", "Landing Page"],
+    link: "https://wisma52.vercel.app/",
   },
   {
     id: 4,
@@ -40,6 +42,7 @@ const projects = [
     image: "/Genova.png", // Atau pake placeholder dulu: "https://placehold.co/800x500/0f1cb3/ffffff?text=Genova+Syrup"
     category: "Digital Catalog",
     tags: ["Catalog System", "F&B Industry"],
+    link: "https://sevenretail.id",
   },
 ];
 

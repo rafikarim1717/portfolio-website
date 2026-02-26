@@ -143,13 +143,13 @@ const Footer = () => {
             </div>
 
             {/* Back to Top */}
-            <button
+            {/* <button
               onClick={scrollToTop}
               className="flex items-center gap-2 text-sm text-slate-500 hover:text-[#4251EB] transition-colors group"
             >
               Back to Top
               <ChevronUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
