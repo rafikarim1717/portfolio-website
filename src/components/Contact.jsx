@@ -23,16 +23,6 @@ const contactData = [
     link: "mailto:rafikarim@yahoo.com",
   },
   {
-    id: 3,
-    title: "WhatsApp",
-    value: "+62 812 XXXX XXXX", // Ganti nomor WA lo
-    description: "Quick messaging and calls",
-    icon: MessageSquare,
-    color: "text-blue-600",
-    bg: "bg-blue-50",
-    link: "https://wa.me/62812XXXXXXXX",
-  },
-  {
     id: 4,
     title: "Availability",
     value: "24/7 Support Available",
@@ -55,7 +45,7 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {contactData.map((item) => {
             const Wrapper = item.link ? "a" : "div";
             return (
@@ -65,7 +55,7 @@ const ContactSection = () => {
                 target={item.link ? "_blank" : undefined}
                 rel={item.link ? "noopener noreferrer" : undefined}
                 className="
-                  group flex items-center gap-6 p-6 rounded-2xl bg-white border border-slate-200 
+                  group flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200 
                   hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 
                   hover:-translate-y-1.5 transition-all duration-300 ease-out 
                   cursor-default no-underline
@@ -73,15 +63,15 @@ const ContactSection = () => {
               >
                 {/* Icon Container */}
                 <div className={`${item.bg} ${item.color} p-4 rounded-xl`}>
-                  <item.icon className="w-6 h-6" />
+                  <item.icon className="w-5 h-5" />
                 </div>
 
                 {/* Text Content */}
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">
+                  <span className="text-xs font-bold text-[#333] uppercase tracking-wide mb-1">
                     {item.title}
                   </span>
-                  <h4 className="font-body text-lg font-semibold text-[#333] mb-1">
+                  <h4 className="font-body text-base font-medium text-[#333] mb-1">
                     {item.value}
                   </h4>
                   <p className="text-sm text-[#6c757d] font-body">

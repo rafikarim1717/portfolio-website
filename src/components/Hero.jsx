@@ -45,11 +45,6 @@ const Hero = () => {
 
           {/* CTA Section */}
           <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-16">
-            <button className="h-10 focus:outline-none font-body cursor-pointer font-medium inline-flex items-center justify-center gap-1.5 rounded-lg bg-[#4251EB] text-white shadow-lg px-4 py-2.5 text-sm sm:px-8 sm:py-3.5 transition-all hover:bg-blue-600 hover:shadow-xl whitespace-nowrap">
-              <HERO_DATA.cta.primary.icon className="w-4 h-4" />
-              {HERO_DATA.cta.primary.label}
-            </button>
-
             <a
               href={HERO_DATA.cta.secondary.href}
               target="_blank"

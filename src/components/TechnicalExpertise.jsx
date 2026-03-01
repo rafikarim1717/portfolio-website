@@ -96,7 +96,7 @@ export default function TechnicalExpertise() {
                     <li
                       key={item}
                       className="
-    bg-blue-50 text-blue-600 font-body px-4 py-2 rounded-lg text-xs text-center 
+    bg-blue-50 text-blue-600 font-body font-medium px-4 py-2 rounded-lg text-xs text-center 
     border border-blue-100/50 transition-all duration-300 cursor-pointer
     /* Efek saat li ini di-hover langsung */
     hover:bg-blue-100 hover:border-blue-300

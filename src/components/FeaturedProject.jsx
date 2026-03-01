@@ -11,7 +11,7 @@ const projects = [
       "A high-performance corporate platform with an integrated CMS, enabling seamless brand management and dynamic content updates for a leading retail group.",
     image: "/seven-retail.png",
     category: "CMS",
-    tags: ["CMS", "Retail Industry", "Next.js"],
+    tags: ["CMS", "Retail", "Next.js"],
     link: "https://sevenretail.id",
   },
   {
@@ -41,7 +41,7 @@ const projects = [
       "A premium business profile and product catalog for a Jakarta-based syrup manufacturer. Featuring a seamless product showcase with direct integration to Tokopedia for streamlined purchasing.",
     image: "/Genova.png", // Atau pake placeholder dulu: "https://placehold.co/800x500/0f1cb3/ffffff?text=Genova+Syrup"
     category: "Digital Catalog",
-    tags: ["Catalog System", "F&B Industry"],
+    tags: ["Catalog", "F&B Industry"],
     link: "https://sevenretail.id",
   },
 ];
@@ -55,7 +55,7 @@ const FeaturedProjects = () => {
           <h2 className="font-title text-3xl text-[#333] tracking-tight mb-6 font-bold">
             Featured Projects
           </h2>
-          <p className="font-body text-lg text-[#6c757d] tracking-tight max-w-2xl mx-auto">
+          <p className="font-body text-base text-[#6c757d] tracking-tight max-w-2xl mx-auto">
             Showcasing custom Website solution. Each project represents a unique
             solution with proven results and satisfied clients.
           </p>
@@ -83,7 +83,7 @@ const FeaturedProjects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute inset-0 z-20 flex items-center justify-center bg-blue-600/60 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+                  className="absolute inset-0 z-20 flex items-center justify-center  backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
                 >
                   <span className="bg-white text-blue-600 px-4 py-2 rounded-full text-xs font-bold tracking-wider shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     SEE WEBSITE
