@@ -68,7 +68,7 @@ const ContactSection = () => {
 
                 {/* Text Content */}
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold text-[#333] uppercase tracking-wide mb-1">
+                  <span className="text-xs font-bold text-[#333] uppercase tracking-wide mb-1.5">
                     {item.title}
                   </span>
                   <h4 className="font-body text-base font-medium text-[#333] mb-1">

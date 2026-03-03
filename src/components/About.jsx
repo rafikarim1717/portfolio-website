@@ -2,10 +2,10 @@ import { LayoutTemplate, ShoppingCart, Settings } from "lucide-react";
 import Container from "./Container";
 
 const aboutIntro = {
-  title: "About Me – Your Website Development Expert",
+  title: "Building Digital Foundations with Precision",
   paragraphs: [
-    "Hi! I'm Rafi, a freelance Website Developer with over 4 years of experience. I specialize in creating AI-assisted websites and JavaScript-based custom solutions that are fast, scalable, and business-focused. I've delivered 24+ projects to clients worldwide.",
-    "What sets me apart is my ability to combine modern web technologies with AI-driven workflows to build efficient systems, automation, and custom web solutions. I don’t just code — I create solutions that solve real business problems.",
+    "Hi! I'm Rafi, a Full-stack Web Engineer with over 4 years of experience in turning complex ideas into high-performance digital products. I focus on engineering scalable business systems and custom web solutions built with modern architecture that's designed to last.",
+    "I believe that a great website isn't just about how it looks, but how it solves problems and scales with your growth. With 24+ projects delivered globally, I pride myself on delivering clean, maintainable code and technical solutions that actually drive business results—efficiently and reliably.",
   ],
 };
 
@@ -17,13 +17,13 @@ const services = [
     icon: LayoutTemplate,
   },
   {
-    title: "E-Commerce Solutions",
+    title: "E-Commerce",
     description:
       "Scale your sales with a robust online store. From secure payment gateways to automated inventory management, I build shopping experiences that are reliable and user-friendly.",
     icon: ShoppingCart,
   },
   {
-    title: "Custom Web Systems",
+    title: "Custom Web",
     description:
       "Solve specific operational headaches with tailor-made tools. Whether it's a booking system like Wisma 52, internal dashboards, or automated business workflows.",
     icon: Settings,
@@ -97,7 +97,7 @@ const About = () => {
                 </div>
 
                 <div>
-                  <p className="font-body font-normal text-[14px] text-[#6c757d] leading-5">
+                  <p className="font-body font-normal text-[13px] text-[#6c757d] leading-5">
                     {service.description}
                   </p>
                 </div>

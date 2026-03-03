@@ -1,11 +1,12 @@
 import { ExternalLink, MessageCircle } from "lucide-react";
 import Container from "@/components/Container";
+import StatsSection from "./StatsSection";
 
 const HERO_DATA = {
   name: "Rafi",
-  role: "Full-stack Web Engineer",
+  role: "Full-stack Web Developer",
   description:
-    "Empowering brands with high-performance digital products. Specialized in engineering scalable business websites, high-converting e-commerce platforms, and complex custom web systems using Next.js and modern tech stacks. I don't just build sites; I build technical solutions that solve real business problems.",
+    "I build web systems that actually work for your business. From scalable platforms to custom digital solutions, I focus on clean code and modern architecture using Next.js. My goal is simple: turning your complex problems into seamless, high-quality digital product.",
   cta: {
     primary: { label: "Order Service", href: "#", icon: ExternalLink },
     secondary: {
@@ -17,8 +18,8 @@ const HERO_DATA = {
   },
   stats: [
     { value: "4+", label: "Years Experience" },
-    { value: "24+", label: "Projects" },
-    { value: "25+", label: "Happy Clients" },
+    { value: "16+", label: "Projects" },
+    { value: "23+", label: "Happy Clients" },
   ],
 };
 
@@ -63,11 +64,11 @@ const Hero = () => {
           </div>
 
           {/* Stats Section */}
-          {/* <div className="max-w-2xl mx-auto pt-10">
+          <div className="max-w-2xl mx-auto pt-10">
             <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
               {HERO_DATA.stats.map((stat, idx) => (
                 <div key={idx} className="flex flex-col items-center">
-                  <div className="font-body font-semibold text-xl text-[#4251EB] leading-none mb-2">
+                  <div className="font-title font-semibold text-2xl text-[#4251EB] mb-1">
                     {stat.value}
                   </div>
                   <div className="font-body text-[10px] sm:text-xs md:text-sm text-[#6c757d] tracking-tight">
@@ -76,7 +77,8 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-          </div> */}
+            {/* <StatsSection /> */}
+          </div>
         </div>
       </Container>
     </section>
