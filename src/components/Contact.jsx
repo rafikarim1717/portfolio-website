@@ -1,6 +1,7 @@
 import React from "react";
-import { Mail, MessageSquare, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import Container from "./Container";
+import CtaCard from "./CtaCard";
 
 const contactData = [
   {
@@ -37,50 +38,55 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-white">
       <Container>
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-title text-3xl text-[#333] font-bold tracking-tight mb-2">
-            Get in Touch
-          </h2>
-        </div>
+        <div className="flex flex-col gap-6">
+          {/* CTA Card */}
+          <CtaCard />
 
-        {/* Contact Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {contactData.map((item) => {
-            const Wrapper = item.link ? "a" : "div";
-            return (
-              <Wrapper
-                key={item.id}
-                href={item.link}
-                target={item.link ? "_blank" : undefined}
-                rel={item.link ? "noopener noreferrer" : undefined}
-                className="
-                  group flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200 
-                  hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 
-                  hover:-translate-y-1.5 transition-all duration-300 ease-out 
+          {/* Get in Touch */}
+          <div>
+            {/* Header */}
+
+            {/* Contact Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {contactData.map((item) => {
+                const Wrapper = item.link ? "a" : "div";
+                return (
+                  <Wrapper
+                    key={item.id}
+                    href={item.link}
+                    target={item.link ? "_blank" : undefined}
+                    rel={item.link ? "noopener noreferrer" : undefined}
+                    className="
+                  group flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200
+                  hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+                  hover:-translate-y-1.5 transition-all duration-300 ease-out
                   cursor-default no-underline
                 "
-              >
-                {/* Icon Container */}
-                <div className={`${item.bg} ${item.color} p-4 rounded-xl`}>
-                  <item.icon className="w-5 h-5" />
-                </div>
+                  >
+                    {/* Icon Container */}
+                    <div className={`${item.bg} ${item.color} p-4 rounded-xl`}>
+                      <item.icon className="w-5 h-5" />
+                    </div>
 
-                {/* Text Content */}
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-[#333] uppercase tracking-wide mb-1.5">
-                    {item.title}
-                  </span>
-                  <h4 className="font-body text-base font-medium text-[#333] mb-1">
-                    {item.value}
-                  </h4>
-                  <p className="text-sm text-[#6c757d] font-body">
-                    {item.description}
-                  </p>
-                </div>
-              </Wrapper>
-            );
-          })}
+                    {/* Text Content */}
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold text-[#333] uppercase tracking-wide mb-1.5">
+                        {item.title}
+                      </span>
+                      <h4 className="font-body text-base font-medium text-[#333] mb-1">
+                        {item.value}
+                      </h4>
+                      <p className="text-sm text-[#6c757d] font-body">
+                        {item.description}
+                      </p>
+                    </div>
+                  </Wrapper>
+                );
+              })}
+            </div>
+          </div>
+
+          
         </div>
       </Container>
     </section>

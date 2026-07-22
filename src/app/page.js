@@ -4,7 +4,6 @@ import About from "@/components/About";
 import TechnicalExpertise from "@/components/TechnicalExpertise";
 import FeaturedProjects from "@/components/FeaturedProject";
 import ContactSection from "@/components/Contact";
-import CtaCard from "@/components/CtaCard";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
@@ -16,7 +15,6 @@ export default function Home() {
       <About />
       <TechnicalExpertise />
       <FeaturedProjects />
-      <CtaCard />
       <ContactSection />
       <Footer />
 

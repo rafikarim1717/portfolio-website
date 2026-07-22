@@ -10,17 +10,11 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
 
-  const navItemClass = (id) =>
-    `px-4 py-2 text-sm font-medium rounded-lg transition-colors text-[#333] font-body
-     ${active === id ? "bg-[#4251EB] text-white" : "hover:bg-slate-100"}`;
+  const navItemClass = () =>
+    `px-4 py-2 text-sm font-medium rounded-lg transition-colors font-body text-[#333] hover:bg-slate-100`;
 
-  const mobileNavItemClass = (id) =>
-    `block px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300
-     ${
-       active === id
-         ? "bg-[#4251EB] text-white"
-         : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
-     }`;
+  const mobileNavItemClass = () =>
+    `block px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-slate-500 hover:text-slate-900 hover:bg-slate-50`;
 
   const navLinks = [
     { name: "Home", href: "#home", id: "home" },
@@ -40,15 +34,9 @@ const Navbar = () => {
             {/* Link ini supaya kalau logo diklik balik ke home */}
             <Link
               href="/"
-              className="relative w-8 h-8 md:w-9 md:h-9 transition-transform active:scale-95"
+              className="relative font-title font-bold text-lg text-[#333] transition-transform active:scale-95"
             >
-              <Image
-                src="/RK.png"
-                alt="RK Logo"
-                fill
-                className="object-contain"
-                priority
-              />
+              Rafi
             </Link>
           </div>
 
