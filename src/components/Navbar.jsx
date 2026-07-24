@@ -11,7 +11,7 @@ const Navbar = () => {
   const [active, setActive] = useState("home");
 
   const navItemClass = () =>
-    `px-4 py-2 text-sm font-medium rounded-lg transition-colors font-body text-[#333] hover:bg-slate-100`;
+    `px-3 py-2 text-sm font-semibold rounded-lg transition-colors font-title text-[#333] hover:bg-slate-100`;
 
   const mobileNavItemClass = () =>
     `block px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-slate-500 hover:text-slate-900 hover:bg-slate-50`;
@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
       <Container>
-        <div className="relative flex items-center justify-between">
+        <div className="flex items-center justify-between">
           {/* Left: Logo */}
           <div className="flex items-center gap-2.5">
             {/* Link ini supaya kalau logo diklik balik ke home */}
@@ -40,22 +40,21 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Center: Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                onClick={() => setActive(link.id)}
-                className={navItemClass(link.id)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+          {/* Right: Desktop Nav + Mobile Toggle */}
+          <div className="flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  onClick={() => setActive(link.id)}
+                  className={navItemClass(link.id)}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
 
-          {/* Right */}
-          <div className="flex items-center gap-2">
             <button
               className="lg:hidden p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-transform active:scale-90"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

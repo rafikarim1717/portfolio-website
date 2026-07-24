@@ -5,7 +5,7 @@ const CtaCard = () => {
         <h3 className="text-lg text-[#333] mb-3 font-semibold font-title tracking-tight">
           Ready for Your Custom Solution?
         </h3>
-        <p className="font-body text-[#6c757d] text-sm mb-8 max-w-lg mx-auto">
+        <p className="font-title font-normal text-[#6c757d] text-sm mb-8 max-w-lg mx-auto">
           Transform your business with high-performance systems and modern
           architecture. {"Let's"} build something exceptional together.
         </p>
@@ -14,9 +14,9 @@ const CtaCard = () => {
           className="
             inline-flex items-center justify-center gap-2 whitespace-nowrap
             text-sm font-medium transition-all duration-300
-            bg-blue-600 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30
+            bg-[#4251EB] hover:bg-[#3845C8] hover:shadow-lg hover:shadow-[#4251EB]/30
             active:scale-95 h-10 rounded-lg px-6 text-white
-            outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50
+            outline-none focus-visible:ring-2 focus-visible:ring-[#4251EB]/50
             cursor-pointer
           "
         >

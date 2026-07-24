@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Zap, Linkedin, Mail, MapPin, ChevronUp } from "lucide-react";
+import AvailabilityBadge from "@/components/AvailabilityBadge";
 
 // Konfigurasi Data Footer
 const FOOTER_DATA = {
@@ -127,20 +128,14 @@ const Footer = () => {
         <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-[#6c757d] font-medium">
-              © {currentYear} {FOOTER_DATA.brand.name} – Freelance Software
-              Developer. All rights reserved.
+              © {currentYear} {FOOTER_DATA.brand.name} – Software
+              Engineer. All rights reserved.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
             {/* Status Badge */}
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-              </span>
-              Available for hire
-            </div>
+            <AvailabilityBadge />
 
             {/* Back to Top */}
             {/* <button

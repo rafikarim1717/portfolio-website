@@ -14,8 +14,21 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Rafi - Freelance Software Engineer",
+  title: "Rafi - Software Engineer",
   description: "Building the future, one line of code at a time.",
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  other: {
+    "msapplication-config": "/browserconfig.xml",
+  },
 };
 
 export default function RootLayout({ children }) {

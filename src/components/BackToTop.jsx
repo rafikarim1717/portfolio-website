@@ -33,7 +33,7 @@ const BackToTop = () => {
       className={`
         fixed bottom-8 right-8 z-50
         p-3 rounded-full bg-white border border-blue-500/20 shadow-lg shadow-blue-500/10
-        text-[#4251EB] hover:bg-[#4251EB] hover:text-white
+        text-blue-600 hover:bg-[#4251EB] hover:text-white
         transition-all duration-300 ease-in-out transform
         ${isVisible ? "translate-y-0 opacity-100 scale-100" : "translate-y-10 opacity-0 scale-50 pointer-events-none"}
         group active:scale-90

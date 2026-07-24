@@ -4,8 +4,8 @@ import Container from "./Container";
 const aboutIntro = {
   title: "Building Digital Foundations with Precision",
   paragraphs: [
-    "Hi! I'm Rafi, a Full-stack Web Engineer with over 4 years of experience in turning complex ideas into high-performance digital products. I focus on engineering scalable business systems and custom web solutions built with modern architecture that's designed to last.",
-    "I believe that a great website isn't just about how it looks, but how it solves problems and scales with your growth. With 24+ projects delivered globally, I pride myself on delivering clean, maintainable code and technical solutions that actually drive business results—efficiently and reliably.",
+    "Hi! I'm Rafi, a Software Engineer with over 4 years of experience turning complex ideas into high-performance digital products. I specialize in scalable business systems and custom web solutions, built on modern architecture that's designed to last.",
+    "I believe a great website isn't just about how it looks, but how it solves problems and scales with your growth. With 24+ projects delivered globally, I pride myself on clean, maintainable code and technical solutions that actually drive business results, efficiently and reliably.",
   ],
 };
 
@@ -25,19 +25,13 @@ const services = [
   {
     title: "Custom Web",
     description:
-      "Solve specific operational headaches with tailor-made tools. Whether it's a booking system like Wisma 52, internal dashboards, or automated business workflows.",
+      "Solve specific operational headaches with tailor-made tools. Whether it's a booking system, internal dashboards, or automated business workflows.",
     icon: Settings,
   },
   {
     title: "AI Integration",
     description:
-      "Cutting-edge AI solutions integrated with WordPress including OpenAI API and custom AI workflows.",
-    icon: Settings,
-  },
-  {
-    title: "Fullstack Development",
-    description:
-      "Proficient in PHP, JavaScript, MySQL, and modern web technologies for complete WordPress solutions.",
+      "Bring AI into your custom web systems with OpenAI API integration, intelligent automation, and AI-powered workflows built right into your platform.",
     icon: Settings,
   },
 ];
@@ -56,7 +50,7 @@ const About = () => {
             {aboutIntro.paragraphs.map((text, index) => (
               <p
                 key={index}
-                className={`text-base text-[#6c757d] font-body tracking-tight ${
+                className={`text-base text-[#6c757d] font-title font-normal tracking-tight ${
                   index !== aboutIntro.paragraphs.length - 1 ? "mb-6" : ""
                 }`}
               >

@@ -3,19 +3,9 @@ import Container from "./Container";
 
 const expertiseGroups = [
   {
-    title: "Core Technologies",
+    title: "Frontend",
     color: "blue",
-    items: ["JavaScript", "React & Next.js", "Tailwind CSS", "Golang"],
-  },
-  {
-    title: "AI Development",
-    color: "purple",
-    items: [
-      "OpenAI API Integration",
-      "AI Content Generation",
-      "Workflow Automation",
-      "AI-Driven Rapid Prototyping",
-    ],
+    items: ["JavaScript", "React & Next.js", "Tailwind CSS", "Responsive Design"],
   },
   {
     title: "Backend & Systems",
@@ -28,12 +18,22 @@ const expertiseGroups = [
     ],
   },
   {
-    title: "Development Tools",
+    title: "AI Development",
+    color: "purple",
+    items: [
+      "OpenAI API Integration",
+      "AI Content Generation",
+      "Workflow Automation",
+      "AI-Driven Rapid Prototyping",
+    ],
+  },
+  {
+    title: "Tools & Workflow",
     color: "purple",
     items: [
       "Git/GitHub",
       "REST APIs",
-      "Database Design (Relational)",
+      "Testing & QA",
       "Deployment & Debugging",
     ],
   },
@@ -69,9 +69,10 @@ export default function TechnicalExpertise() {
           >
             Technical Expertise
           </h2>
-          <p className="text-base text-body text-[#6c757d] max-w-2xl mx-auto">
-            Comprehensive WordPress development skills with modern tools and
-            technologies that deliver exceptional results for every project.
+          <p className="text-base font-title font-normal text-[#6c757d] max-w-2xl mx-auto">
+            A modern full-stack toolkit — React, Next.js, and Golang — built
+            to ship AI-integrated, production-ready systems, not
+            proof-of-concepts.
           </p>
         </header>
 

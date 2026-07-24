@@ -3,75 +3,22 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Container from "./Container";
+import { projects } from "@/data/projects";
 
-const projects = [
-  {
-    id: 1,
-    title: "Seven Retail",
-    description:
-      "A high-performance corporate platform with an integrated CMS, enabling seamless brand management and dynamic content updates for a leading retail group.",
-    image: "/seven-retail.png",
-    category: "CMS",
-    tags: ["CMS", "Retail", "Next.js"],
-    link: "https://seven-retail.com",
-  },
-  {
-    id: 2,
-    title: "Ikonoa",
-    description:
-      "A specialized insurance brokerage platform featuring risk consulting tools and a transparent claims management system for complex insurance workflows.",
-    image: "/Ikonoa.png",
-    category: "Company Profile",
-    tags: ["Insurance Tech", "Next.js"],
-    link: "https://www.ikonoa.com/",
-  },
-  {
-    id: 3,
-    title: "Wisma 52",
-    description:
-      "A premium hospitality landing page and property management profile designed to convert leads for high-end residential living in Jakarta.",
-    image: "https://placehold.co/800x500/0f1cb3/ffffff?text=Wisma52",
-    category: "Business Profile",
-    tags: ["Nextjs", "Landing Page"],
-    link: "https://wisma52.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Genova",
-    description:
-      "A premium business profile and product catalog for a Jakarta-based syrup manufacturer. Featuring a seamless product showcase with direct integration to Tokopedia for streamlined purchasing.",
-    image: "/Genova.png",
-    category: "Digital Catalog",
-    tags: ["Catalog", "F&B Industry"],
-    link: "https://sevenretail.id",
-  },
-  {
-    id: 5,
-    title: "Genova",
-    description:
-      "A premium business profile and product catalog for a Jakarta-based syrup manufacturer. Featuring a seamless product showcase with direct integration to Tokopedia for streamlined purchasing.",
-    image: "/Genova.png",
-    category: "Digital Catalog",
-    tags: ["Catalog", "F&B Industry"],
-    link: "https://sevenretail.id",
-  },
-  {
-    id: 6,
-    title: "Genova",
-    description:
-      "A premium business profile and product catalog for a Jakarta-based syrup manufacturer. Featuring a seamless product showcase with direct integration to Tokopedia for streamlined purchasing.",
-    image: "/Genova.png",
-    category: "Digital Catalog",
-    tags: ["Catalog", "F&B Industry"],
-    link: "https://sevenretail.id",
-  },
-];
+const getInitials = (title) =>
+  title
+    .trim()
+    .split(/\s+/)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 3);
 
 const FeaturedProjects = () => {
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount, setVisibleCount] = useState(3);
 
   const showMoreProjects = () => {
-    setVisibleCount((prev) => prev + 4);
+    setVisibleCount((prev) => prev + 3);
   };
 
   return (
@@ -82,14 +29,15 @@ const FeaturedProjects = () => {
           <h2 className="font-title text-3xl text-[#333] tracking-tight mb-6 font-bold">
             Featured Projects
           </h2>
-          <p className="font-body text-base text-[#6c757d] tracking-tight max-w-2xl mx-auto">
-            Showcasing custom Website solutions. Each project represents a
-            unique solution with proven results and satisfied clients.
+          <p className="font-title font-normal text-base text-[#6c757d] tracking-tight max-w-2xl mx-auto">
+            A selection of real client work — from e-commerce platforms to
+            business profiles — each one built to solve a specific problem,
+            not just look good.
           </p>
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {projects.slice(0, visibleCount).map((project) => (
             <div
               key={project.id}
@@ -97,20 +45,28 @@ const FeaturedProjects = () => {
             >
               {/* Image Container with Hover Overlay */}
               <div className="h-52 bg-slate-100 relative overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                />
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#4251EB] to-[#3845C8] transition-transform duration-500 group-hover:scale-110">
+                    <span className="font-title font-bold text-5xl text-white/90 tracking-wide">
+                      {getInitials(project.title)}
+                    </span>
+                  </div>
+                )}
 
                 {/* Overlay Biru Tipis + Text */}
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute inset-0 z-20 flex items-center justify-center bg-blue-600/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+                  className="absolute inset-0 z-20 flex items-center justify-center bg-[#4251EB]/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
                 >
                   <span className="bg-white text-blue-600 px-4 py-2 rounded-full text-xs font-bold tracking-wider shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     SEE WEBSITE
@@ -118,7 +74,7 @@ const FeaturedProjects = () => {
                 </a>
 
                 {/* Category Tag */}
-                <div className="absolute top-4 left-4 z-10 bg-blue-600 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded shadow-sm">
+                <div className="absolute top-4 left-4 z-10 bg-[#4251EB] text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded shadow-sm">
                   {project.category}
                 </div>
               </div>
@@ -151,7 +107,7 @@ const FeaturedProjects = () => {
           <div className="flex justify-center mt-12">
             <button
               onClick={showMoreProjects}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 bg-blue-600 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30 active:scale-95 h-10 rounded-lg px-6 text-white outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 bg-[#4251EB] hover:bg-[#3845C8] hover:shadow-lg hover:shadow-[#4251EB]/30 active:scale-95 h-10 rounded-lg px-6 text-white outline-none focus-visible:ring-2 focus-visible:ring-[#4251EB]/50 cursor-pointer"
             >
               Load More
             </button>
