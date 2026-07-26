@@ -74,24 +74,24 @@ const FeaturedProjects = () => {
                 </a>
 
                 {/* Category Tag */}
-                <div className="absolute top-4 left-4 z-10 bg-[#4251EB] text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded shadow-sm">
+                <div className="absolute top-4 left-4 z-10 bg-slate-900/85 backdrop-blur-sm text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded shadow-sm">
                   {project.category}
                 </div>
               </div>
 
               {/* Content Body */}
-              <div className="p-4 flex flex-col flex-grow">
-                <h3 className="font-bold font-title text-[#333] text-sm mb-3 group-hover:text-blue-600 transition-colors">
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="font-bold font-title text-[#333] text-sm mb-2.5 group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-sm font-body mb-6 text-[#6C757D] line-clamp-3 leading-relaxed">
+                <p className="text-sm font-body mb-6 text-[#6C757D] line-clamp-3 leading-normal tracking-normal">
                   {project.description}
                 </p>
                 <div className="mt-auto flex flex-wrap gap-2">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-blue-50 text-blue-600 text-[10px] font-medium px-2 py-1 rounded uppercase"
+                      className="bg-white text-blue-600 border border-blue-200 shadow-sm text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide"
                     >
                       {tag}
                     </span>

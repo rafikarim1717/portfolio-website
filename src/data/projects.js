@@ -5,8 +5,8 @@ export const projects = [
     description:
       "A high-performance corporate platform with an integrated CMS, enabling seamless brand management and dynamic content updates for a leading retail group.",
     image: "/portfolio/seven-retail.png",
-    category: "CMS",
-    tags: ["CMS", "Retail", "Next.js"],
+    category: "CMS Platform",
+    tags: ["Retail", "Next.js", "Headless CMS"],
     link: "https://seven-retail.com",
   },
   {
@@ -15,28 +15,28 @@ export const projects = [
     description:
       "A specialized insurance brokerage platform featuring risk consulting tools and a transparent claims management system for complex insurance workflows.",
     image: "/portfolio/Ikonoa.png",
-    category: "Company Profile",
-    tags: ["Insurance Tech", "Next.js"],
+    category: "Insurance Platform",
+    tags: ["Insurance Tech", "Risk Management"],
     link: "https://www.ikonoa.com/",
   },
-  {
-    id: 3,
-    title: "Wisma 52",
-    description:
-      "A premium hospitality landing page and property management profile designed to convert leads for high-end residential living in Jakarta.",
-    image: null,
-    category: "Business Profile",
-    tags: ["Nextjs", "Landing Page"],
-    link: "https://wisma52.vercel.app/",
-  },
+{
+  id: 3,
+  title: "Wisma 52",
+  description:
+    "A premium hospitality landing page and property management profile designed to convert leads for high-end residential living in Jakarta.",
+  image: null,
+  category: "Business Profile",
+  tags: ["Inn", "Next.js", "Premium"],
+  link: "https://wisma52.vercel.app/",
+},
   {
     id: 4,
     title: "Genova",
     description:
       "A premium business profile and product catalog for a Jakarta-based syrup manufacturer. Featuring a seamless product showcase with direct integration to Tokopedia for streamlined purchasing.",
     image: "/portfolio/Genova.png",
-    category: "Digital Catalog",
-    tags: ["Catalog", "F&B Industry"],
+    category: "E-commerce Catalog",
+    tags: ["F&B Industry", "E-commerce", "Next.js"],
     link: "https://sevenretail.id",
   },
   {
@@ -46,7 +46,7 @@ export const projects = [
       "A professional company profile for an insurance and protection services provider, presenting their services and credibility to build trust with prospective clients.",
     image: null,
     category: "Company Profile",
-    tags: ["Company Profile", "Insurance", "Next.js"],
+    tags: ["Insurance", "Trust Building", "Next.js"],
     link: "https://www.multisaranapelindung.com/",
   },
 ];

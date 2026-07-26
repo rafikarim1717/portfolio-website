@@ -36,9 +36,9 @@ const contactData = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-16 bg-white">
       <Container>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-12">
           {/* CTA Card */}
           <CtaCard />
 

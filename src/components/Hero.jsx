@@ -68,6 +68,7 @@ const Hero = () => {
           </div>
 
           {/* Trusted By - social proof without needing a headshot */}
+          {/* Temporarily hidden
           <div className="w-full overflow-hidden px-6 sm:px-10">
             <div className="flex w-max animate-marquee items-center gap-16 sm:gap-20">
               {[...HERO_DATA.trustedBy, ...HERO_DATA.trustedBy].map(
@@ -88,6 +89,7 @@ const Hero = () => {
               )}
             </div>
           </div>
+          */}
         </div>
       </Container>
     </section>

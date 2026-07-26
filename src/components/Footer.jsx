@@ -125,7 +125,7 @@ const Footer = () => {
         */}
 
         {/* Simplified Footer / Bottom Bar */}
-        <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-[#6c757d] font-medium">
               © {currentYear} {FOOTER_DATA.brand.name} – Software
