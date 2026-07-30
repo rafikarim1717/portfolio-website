@@ -40,7 +40,7 @@ const StatsSection = () => {
               className="
                   group min-w-0 p-6 rounded-xl bg-white border border-slate-200 
                   /* Efek Hover Mewah */
-                  hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 
+                  hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
                   hover:-translate-y-1.5 transition-all duration-300 ease-out 
                   cursor-default flex items-center
                 "

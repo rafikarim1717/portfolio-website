@@ -84,7 +84,7 @@ export default function TechnicalExpertise() {
             return (
               <section
                 key={group.title}
-                className="bg-card/50 backdrop-blur-sm rounded-lg p-5 border border-slate-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 
+                className="bg-card/50 backdrop-blur-sm rounded-lg p-5 border border-slate-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
     hover:-translate-y-1.5 transition-all duration-300 ease-out 
     cursor-default"
               >
@@ -97,7 +97,7 @@ export default function TechnicalExpertise() {
                     <li
                       key={item}
                       className="
-    bg-blue-50 text-blue-600 font-body font-medium px-4 py-2 rounded-lg text-xs text-center 
+    bg-blue-50 text-blue-600 font-body font-medium px-4 py-2 rounded-lg text-xs text-center
     border border-blue-100/50 transition-all duration-300 cursor-pointer
     /* Efek saat li ini di-hover langsung */
     hover:bg-blue-100 hover:border-blue-300

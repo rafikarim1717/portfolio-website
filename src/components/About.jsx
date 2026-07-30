@@ -72,7 +72,7 @@ const About = () => {
           group relative flex flex-col gap-4 p-6 rounded-xl h-full border 
           bg-white/70 leading-5 border-slate-200 
           /* Efek Hover */
-          hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 
+          hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
           hover:-translate-y-1.5 transition-all duration-300 ease-out
           cursor-default
         "
