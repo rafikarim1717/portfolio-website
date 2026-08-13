@@ -49,4 +49,15 @@ export const projects = [
     tags: ["Insurance", "Trust Building", "Next.js"],
     link: "https://www.multisaranapelindung.com/",
   },
+  {
+    id: 6,
+    title: "Aura Clinic",
+    description:
+      "A company profile mockup for an aesthetic clinic, showcasing treatments and facilities with a clean, trustworthy design to build patient confidence.",
+    image: null,
+    category: "Business Profile",
+    tags: ["Clinic", "Business Profile", "Next.js"],
+    link: "https://aura-clinic-pi.vercel.app/",
+  }
+
 ];
