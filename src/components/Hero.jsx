@@ -1,5 +1,4 @@
 import { MessageCircle } from "lucide-react";
-import Image from "next/image";
 import Container from "@/components/Container";
 
 const HERO_DATA = {

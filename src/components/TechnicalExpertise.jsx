@@ -4,12 +4,10 @@ import Container from "./Container";
 const expertiseGroups = [
   {
     title: "Frontend",
-    color: "blue",
     items: ["JavaScript", "React & Next.js", "Tailwind CSS", "Responsive Design"],
   },
   {
     title: "Backend & Systems",
-    color: "blue",
     items: [
       "Golang",
       "Database Modeling",
@@ -19,7 +17,6 @@ const expertiseGroups = [
   },
   {
     title: "AI Development",
-    color: "purple",
     items: [
       "OpenAI API Integration",
       "AI Content Generation",
@@ -29,7 +26,6 @@ const expertiseGroups = [
   },
   {
     title: "Tools & Workflow",
-    color: "purple",
     items: [
       "Git/GitHub",
       "REST APIs",
@@ -41,9 +37,9 @@ const expertiseGroups = [
 
 const services = [
   {
-    title: "Custom Plugin Development",
+    title: "Custom Dashboard & Tools",
     description:
-      "Bespoke WordPress plugins built from scratch with clean code and full documentation.",
+      "Bespoke internal dashboards and business tools built from scratch with clean, maintainable code and full documentation.",
   },
   {
     title: "AI Integration",
@@ -53,13 +49,17 @@ const services = [
   {
     title: "Payment Gateway Integration",
     description:
-      "Secure custom payment gateway integration for WooCommerce with multi-currency support.",
+      "Secure payment gateway integration with multi-currency support for modern web platforms.",
   },
 ];
 
 export default function TechnicalExpertise() {
   return (
-    <section aria-labelledby="technical-expertise-heading" className="py-20">
+    <section
+      id="skills"
+      aria-labelledby="technical-expertise-heading"
+      className="py-20"
+    >
       <Container>
         {/* Section Header */}
         <header className="text-center mb-16">
@@ -79,8 +79,6 @@ export default function TechnicalExpertise() {
         {/* Expertise Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {expertiseGroups.map((group) => {
-            const colorClasses = "bg-blue-50 text-blue-600";
-
             return (
               <section
                 key={group.title}

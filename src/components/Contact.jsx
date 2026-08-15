@@ -16,18 +16,18 @@ const contactData = [
   {
     id: 2,
     title: "Email",
-    value: "rafikarim@yahoo.com", // Ganti email lo Jon
+    value: "karemrafi@gmail.com",
     description: "Response within 24 hours",
     icon: Mail,
     color: "text-blue-600",
     bg: "bg-blue-50",
-    link: "mailto:rafikarim@yahoo.com",
+    link: "mailto:karemrafi@gmail.com",
   },
   {
     id: 4,
     title: "Availability",
-    value: "24/7 Support Available",
-    description: "Flexible hours for international clients",
+    value: "Flexible Hours, Fast Response",
+    description: "Quick turnaround for international clients",
     icon: Clock,
     color: "text-blue-600",
     bg: "bg-blue-50",
@@ -50,18 +50,19 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {contactData.map((item) => {
                 const Wrapper = item.link ? "a" : "div";
+                const opensNewTab = item.link?.startsWith("http");
                 return (
                   <Wrapper
                     key={item.id}
                     href={item.link}
-                    target={item.link ? "_blank" : undefined}
-                    rel={item.link ? "noopener noreferrer" : undefined}
-                    className="
+                    target={opensNewTab ? "_blank" : undefined}
+                    rel={opensNewTab ? "noopener noreferrer" : undefined}
+                    className={`
                   group flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200
                   hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
                   hover:-translate-y-1.5 transition-all duration-300 ease-out
-                  cursor-default no-underline
-                "
+                  no-underline ${item.link ? "cursor-pointer" : "cursor-default"}
+                `}
                   >
                     {/* Icon Container */}
                     <div className={`${item.bg} ${item.color} p-4 rounded-xl`}>

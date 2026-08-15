@@ -1,5 +1,5 @@
 import React from "react";
-import { Briefcase, Users, Star, Calendar } from "lucide-react";
+import { Briefcase, Users, Calendar } from "lucide-react";
 import Container from "./Container";
 
 const stats = [
@@ -15,7 +15,7 @@ const stats = [
     id: 2,
     label: "Happy Clients",
     value: "25+",
-    icon: Users, // Atau pake Star kalau mau kesan rating
+    icon: Users,
     color: "text-blue-600",
     bg: "bg-blue-50",
   },

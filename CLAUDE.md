@@ -22,11 +22,13 @@ There is no test setup in this repo (no test runner, no test files).
 **Stack**: Next.js 16 (App Router), React 19, Tailwind CSS v4 (CSS-first config via `@theme inline` in `globals.css`, not `tailwind.config.js` — that file only configures `content` globs and the `container` breakpoints). `lucide-react` for icons. No state management library, no data fetching layer — everything is static/hardcoded.
 
 **Page composition** (`src/app/page.js`): the home page is literally a fixed stack of section components, in this order:
-`Navbar → Hero → About → TechnicalExpertise → FeaturedProject → CtaCard → Contact → Footer`, plus a floating `BackToTop` button. Each section is self-contained: its own copy/content lives as a hardcoded data object/array at the top of the component file (e.g. `HERO_DATA` in `Hero.jsx`, `projects` in `FeaturedProject.jsx`, `contactData` in `Contact.jsx`). To change site copy or add/remove a project/service/stat, edit the data array in that component — there is no CMS or external data source.
+`Navbar → Hero → About → TechnicalExpertise → HowIWork → FeaturedProject → Testimonials → Contact → Footer`, plus a floating `BackToTop` button. `CtaCard` is not its own top-level section — it's rendered *inside* `Contact.jsx`. Each section is self-contained: its own copy/content lives as a hardcoded data object/array at the top of the component file (e.g. `HERO_DATA` in `Hero.jsx`, `projects` in `FeaturedProject.jsx`, `contactData` in `Contact.jsx`). To change site copy or add/remove a project/service/stat, edit the data array in that component — there is no CMS or external data source.
+
+`StatsSection.jsx` (Projects Completed / Happy Clients / Years Experience stat cards) exists fully built but is intentionally **not** imported into `page.js` — it's a deliberate exclusion, not an oversight, so don't wire it in without checking first.
 
 **Layout primitive**: `Container.jsx` is the shared horizontal-padding/max-width wrapper (`container mx-auto px-4 lg:px-8 xl:px-24`) used by every section — reuse it instead of duplicating width/padding classes.
 
-**Client components**: only components with interactivity are `"use client"` — `Navbar` (mobile menu toggle, active-link state), `FeaturedProject` (show-more pagination via `visibleCount` state), `BackToTop` (scroll-listener visibility). Everything else is a plain server component (static JSX, no hooks).
+**Client components**: only components with interactivity are `"use client"` — `Navbar` (mobile menu toggle; active-link state is driven by an `IntersectionObserver` scroll-spy over the section ids in `navLinks`, not just click state), `FeaturedProject` (show-more pagination via `visibleCount` state), `BackToTop` (scroll-listener visibility). Everything else is a plain server component (static JSX, no hooks).
 
 **Fonts**: loaded in `src/app/layout.js` via `next/font/google`, exposed as CSS variables on `<body>`:
 - `Inter` → `--font-inter` → mapped to `--font-body` → Tailwind utility `font-body` (default body/paragraph text)
@@ -41,8 +43,12 @@ The mapping happens in `globals.css` under `@theme inline`. To use a font, apply
 - Body text: `#333` / `#333333` for headings, `#6c757d` for secondary/paragraph text.
 - Page background: a subtle top-to-bottom gradient (`--background` in `globals.css`, `linear-gradient(to top, #cfd9df, #e2ebf0)`), `background-attachment: fixed`.
 
-There's no dark mode implementation despite a `Moon` icon import sitting unused in `Navbar.jsx`.
+There's no dark mode implementation.
 
 **Recurring visual pattern**: most content cards across sections (`About` services, `TechnicalExpertise` groups, `FeaturedProject` cards, `Contact` cards) share the same hover treatment: `border-slate-200`, `hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 ease-out`. Keep new cards consistent with this rather than inventing a new hover style.
 
 **Images**: static assets (client logos for `FeaturedProject`) live in `public/` and are referenced by root-relative path (`/Genova.png`, etc.), rendered via `next/image` with `fill`.
+
+**SEO/metadata**: `src/app/layout.js` sets `metadataBase`, Open Graph, Twitter card, and `robots` fields off a `SITE_URL` constant (currently the Vercel preview domain, `https://portfolio-website-beta-kohl.vercel.app` — update this if a custom domain is ever attached). `src/app/robots.js` and `src/app/sitemap.js` are Next.js App Router metadata routes generated from the same `SITE_URL`. There's no dedicated 1200×630 OG image yet — Open Graph currently relies on title/description only.
+
+**Hero "Trusted By" logo marquee**: `Hero.jsx` has a fully-built client-logo marquee (`HERO_DATA.trustedBy`, assets already in `public/logo/`) that is deliberately commented out ("Temporarily hidden"). Leave it disabled unless explicitly asked to re-enable it.

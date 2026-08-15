@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import TechnicalExpertise from "@/components/TechnicalExpertise";
+import HowIWork from "@/components/HowIWork";
 import FeaturedProjects from "@/components/FeaturedProject";
+import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
@@ -14,7 +16,9 @@ export default function Home() {
       <Hero />
       <About />
       <TechnicalExpertise />
+      <HowIWork />
       <FeaturedProjects />
+      <Testimonials />
       <ContactSection />
       <Footer />
 

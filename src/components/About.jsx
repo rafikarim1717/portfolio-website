@@ -1,4 +1,4 @@
-import { LayoutTemplate, ShoppingCart, Settings } from "lucide-react";
+import { LayoutTemplate, ShoppingCart, Settings, Sparkles } from "lucide-react";
 import Container from "./Container";
 
 const aboutIntro = {
@@ -32,7 +32,7 @@ const services = [
     title: "AI Integration",
     description:
       "Bring AI into your custom web systems with OpenAI API integration, intelligent automation, and AI-powered workflows built right into your platform.",
-    icon: Settings,
+    icon: Sparkles,
   },
 ];
 
@@ -41,7 +41,7 @@ const About = () => {
     <section id="about" className="py-20 bg-blue-600/5">
       <Container>
         {/* Intro */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="font-title font-bold text-3xl lg:text-4xl text-[#333] tracking-tight mb-6">
             {aboutIntro.title}
           </h2>

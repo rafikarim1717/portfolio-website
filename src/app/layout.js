@@ -13,10 +13,45 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const SITE_URL = "https://portfolio-website-beta-kohl.vercel.app";
+const SITE_TITLE = "Rafi - Software Engineer";
+const SITE_DESCRIPTION =
+  "Full-stack web developer building custom dashboards, business systems, and AI-integrated platforms with modern architecture — for businesses that need more than a homepage.";
+
 export const metadata = {
-  title: "Rafi - Software Engineer",
-  description: "Building the future, one line of code at a time.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "Rafi",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Next.js Developer",
+    "Web Development",
+    "Custom Web Systems",
+    "AI Integration",
+  ],
   manifest: "/manifest.json",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: SITE_TITLE,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
