@@ -29,7 +29,7 @@ const steps = [
 
 const HowIWork = () => {
   return (
-    <section id="process" className="py-20">
+    <section id="process" className="py-20 bg-blue-600/5">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">

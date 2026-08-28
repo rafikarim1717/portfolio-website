@@ -1,10 +1,14 @@
 import { Quote } from "lucide-react";
 import Container from "@/components/Container";
-import { testimonials } from "@/data/testimonials";
+import { projects } from "@/data/projects";
+
+const testimonials = projects
+  .filter((project) => project.testimonial)
+  .map((project) => ({ id: project.id, ...project.testimonial }));
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20">
+    <section id="testimonials" className="py-20 bg-blue-600/5">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">
@@ -34,7 +38,7 @@ const Testimonials = () => {
                 <Quote className="w-5 h-5" />
               </div>
 
-              <p className="font-body text-sm text-[#333] leading-relaxed flex-grow">
+              <p className="font-body text-sm text-[#333] leading-normal flex-grow">
                 {testimonial.quote}
               </p>
 

@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Container from "./Container";
 import { projects } from "@/data/projects";
 
@@ -22,7 +24,7 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-blue-600/5">
+    <section id="projects" className="py-20">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">
@@ -43,35 +45,23 @@ const FeaturedProjects = () => {
               key={project.id}
               className="group flex flex-col h-full bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-default"
             >
-              {/* Image Container with Hover Overlay */}
+              {/* Image Container */}
               <div className="h-52 bg-slate-100 relative overflow-hidden">
                 {project.image ? (
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 ) : (
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#4251EB] to-[#3845C8] transition-transform duration-500 group-hover:scale-110">
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#4251EB] to-[#3845C8]">
                     <span className="font-title font-bold text-5xl text-white/90 tracking-wide">
                       {getInitials(project.title)}
                     </span>
                   </div>
                 )}
-
-                {/* Overlay Biru Tipis + Text */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 z-20 flex items-center justify-center bg-[#4251EB]/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
-                >
-                  <span className="bg-white text-blue-600 px-4 py-2 rounded-full text-xs font-bold tracking-wider shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    SEE WEBSITE
-                  </span>
-                </a>
 
                 {/* Category Tag */}
                 <div className="absolute top-4 left-4 z-10 bg-slate-900/85 backdrop-blur-sm text-white text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded shadow-sm">
@@ -81,13 +71,15 @@ const FeaturedProjects = () => {
 
               {/* Content Body */}
               <div className="p-5 flex flex-col flex-grow">
-                <h3 className="font-bold font-title text-[#333] text-sm mb-2.5 group-hover:text-blue-600 transition-colors">
-                  {project.title}
-                </h3>
+                <Link href={`/projects/${project.slug}`}>
+                  <h3 className="font-bold font-title text-[#333] text-sm mb-2.5 group-hover:text-blue-600 transition-colors">
+                    {project.title}
+                  </h3>
+                </Link>
                 <p className="text-sm font-body mb-6 text-[#6C757D] line-clamp-3 leading-normal tracking-normal">
                   {project.description}
                 </p>
-                <div className="mt-auto flex flex-wrap gap-2">
+                <div className="mt-auto flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
@@ -97,6 +89,13 @@ const FeaturedProjects = () => {
                     </span>
                   ))}
                 </div>
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold font-title text-blue-600 hover:gap-2.5 transition-all"
+                >
+                  View Case Study
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
           ))}
