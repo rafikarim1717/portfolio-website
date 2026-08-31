@@ -1,23 +1,32 @@
+"use client";
+
 import React from "react";
 import { Mail, MapPin, Clock } from "lucide-react";
 import Container from "./Container";
 import CtaCard from "./CtaCard";
+import { useLanguage } from "@/context/LanguageContext";
 
 const contactData = [
   {
     id: 1,
-    title: "Location",
-    value: "Available Globally",
-    description: "Available for remote work worldwide",
+    title: { id: "Lokasi", en: "Location" },
+    value: { id: "Tersedia Secara Global", en: "Available Globally" },
+    description: {
+      id: "Tersedia buat kerja remote di seluruh dunia",
+      en: "Available for remote work worldwide",
+    },
     icon: MapPin,
     color: "text-blue-600",
     bg: "bg-blue-50",
   },
   {
     id: 2,
-    title: "Email",
-    value: "karemrafi@gmail.com",
-    description: "Response within 24 hours",
+    title: { id: "Email", en: "Email" },
+    value: { id: "karemrafi@gmail.com", en: "karemrafi@gmail.com" },
+    description: {
+      id: "Respons dalam 24 jam",
+      en: "Response within 24 hours",
+    },
     icon: Mail,
     color: "text-blue-600",
     bg: "bg-blue-50",
@@ -25,9 +34,15 @@ const contactData = [
   },
   {
     id: 4,
-    title: "Availability",
-    value: "Flexible Hours, Fast Response",
-    description: "Quick turnaround for international clients",
+    title: { id: "Ketersediaan", en: "Availability" },
+    value: {
+      id: "Jam Fleksibel, Respons Cepat",
+      en: "Flexible Hours, Fast Response",
+    },
+    description: {
+      id: "Turnaround cepat buat klien internasional",
+      en: "Quick turnaround for international clients",
+    },
     icon: Clock,
     color: "text-blue-600",
     bg: "bg-blue-50",
@@ -35,6 +50,8 @@ const contactData = [
 ];
 
 const ContactSection = () => {
+  const { lang } = useLanguage();
+
   return (
     <section id="contact" className="py-16 bg-white">
       <Container>
@@ -72,13 +89,13 @@ const ContactSection = () => {
                     {/* Text Content */}
                     <div className="flex flex-col">
                       <span className="text-xs font-bold text-[#333] uppercase tracking-wide mb-1.5">
-                        {item.title}
+                        {item.title[lang]}
                       </span>
                       <h4 className="font-body text-base font-medium text-[#333] mb-1">
-                        {item.value}
+                        {item.value[lang]}
                       </h4>
                       <p className="text-sm text-[#6c757d] font-body">
-                        {item.description}
+                        {item.description[lang]}
                       </p>
                     </div>
                   </Wrapper>
@@ -87,7 +104,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          
+
         </div>
       </Container>
     </section>

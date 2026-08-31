@@ -1,4 +1,5 @@
 import { Inter, Poppins } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,8 +16,10 @@ const poppins = Poppins({
 
 const SITE_URL = "https://portfolio-website-beta-kohl.vercel.app";
 const SITE_TITLE = "Rafi - Software Engineer";
+// Metadata (title/description/OG) dikunci ke Bahasa Indonesia — ini gak ikut
+// toggle bahasa client-side, jadi disamain sama bahasa default situs.
 const SITE_DESCRIPTION =
-  "Full-stack web developer building custom dashboards, business systems, and AI-integrated platforms with modern architecture — for businesses that need more than a homepage.";
+  "Full-stack web developer yang membangun dashboard custom, sistem bisnis, dan platform ber-AI dengan arsitektur modern — untuk bisnis yang butuh lebih dari sekadar homepage.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -40,7 +43,7 @@ export const metadata = {
     description: SITE_DESCRIPTION,
     url: "/",
     siteName: SITE_TITLE,
-    locale: "en_US",
+    locale: "id_ID",
     type: "website",
   },
   twitter: {
@@ -68,9 +71,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={`${inter.variable} ${poppins.variable} antialiased`}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

@@ -6,6 +6,24 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Container from "./Container";
 import { projects } from "@/data/projects";
+import { useLanguage } from "@/context/LanguageContext";
+
+const SECTION_TEXT = {
+  id: {
+    heading: "Proyek Unggulan",
+    subheading:
+      "Kumpulan pekerjaan klien nyata — dari platform e-commerce sampai company profile — masing-masing dibangun buat menyelesaikan masalah spesifik, bukan cuma tampil bagus.",
+    loadMore: "Tampilkan Lebih Banyak",
+    viewCaseStudy: "Lihat Studi Kasus",
+  },
+  en: {
+    heading: "Featured Projects",
+    subheading:
+      "A selection of real client work — from e-commerce platforms to business profiles — each one built to solve a specific problem, not just look good.",
+    loadMore: "Load More",
+    viewCaseStudy: "View Case Study",
+  },
+};
 
 const getInitials = (title) =>
   title
@@ -18,6 +36,8 @@ const getInitials = (title) =>
 
 const FeaturedProjects = () => {
   const [visibleCount, setVisibleCount] = useState(3);
+  const { lang } = useLanguage();
+  const t = SECTION_TEXT[lang];
 
   const showMoreProjects = () => {
     setVisibleCount((prev) => prev + 3);
@@ -29,12 +49,10 @@ const FeaturedProjects = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-title text-3xl text-[#333] tracking-tight mb-6 font-bold">
-            Featured Projects
+            {t.heading}
           </h2>
           <p className="font-title font-normal text-base text-[#6c757d] tracking-tight max-w-2xl mx-auto">
-            A selection of real client work — from e-commerce platforms to
-            business profiles — each one built to solve a specific problem,
-            not just look good.
+            {t.subheading}
           </p>
         </div>
 
@@ -76,8 +94,8 @@ const FeaturedProjects = () => {
                     {project.title}
                   </h3>
                 </Link>
-                <p className="text-sm font-body mb-6 text-[#6C757D] line-clamp-3 leading-normal tracking-normal">
-                  {project.description}
+                <p className="text-sm font-body mb-6 text-[#6C757D] line-clamp-3 leading-5 tracking-normal">
+                  {project.description[lang]}
                 </p>
                 <div className="mt-auto flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, index) => (
@@ -93,7 +111,7 @@ const FeaturedProjects = () => {
                   href={`/projects/${project.slug}`}
                   className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold font-title text-blue-600 hover:gap-2.5 transition-all"
                 >
-                  View Case Study
+                  {t.viewCaseStudy}
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -108,7 +126,7 @@ const FeaturedProjects = () => {
               onClick={showMoreProjects}
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 bg-[#4251EB] hover:bg-[#3845C8] hover:shadow-lg hover:shadow-[#4251EB]/30 active:scale-95 h-10 rounded-lg px-6 text-white outline-none focus-visible:ring-2 focus-visible:ring-[#4251EB]/50 cursor-pointer"
             >
-              Load More
+              {t.loadMore}
             </button>
           </div>
         )}

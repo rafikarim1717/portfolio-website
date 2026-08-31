@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Github, Linkedin, Instagram } from "lucide-react";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
+import { useLanguage } from "@/context/LanguageContext";
 
 const FOOTER_DATA = {
   brand: {
@@ -16,8 +17,14 @@ const FOOTER_DATA = {
   ],
 };
 
+const COPYRIGHT_TEXT = {
+  id: "Hak cipta dilindungi.",
+  en: "All rights reserved.",
+};
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { lang } = useLanguage();
 
   return (
     <footer className="bg-white pt-8 pb-8">
@@ -25,8 +32,8 @@ const Footer = () => {
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-[#6c757d] font-medium">
-              © {currentYear} {FOOTER_DATA.brand.name} – Software
-              Engineer. All rights reserved.
+              © {currentYear} {FOOTER_DATA.brand.name} – Software Engineer.{" "}
+              {COPYRIGHT_TEXT[lang]}
             </p>
           </div>
 

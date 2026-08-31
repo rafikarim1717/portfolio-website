@@ -16,13 +16,12 @@ export default function Home() {
       <Hero />
       <About />
       <TechnicalExpertise />
-      <HowIWork />
       <FeaturedProjects />
+      <HowIWork />
       <Testimonials />
       <ContactSection />
       <Footer />
 
-      {/* Floating Elements */}
       <BackToTop />
     </main>
   );

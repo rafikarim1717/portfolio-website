@@ -1,22 +1,24 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import Container from "@/components/Container";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 const navLinks = [
-  { name: "Home", href: "/#home", id: "home" },
-  { name: "About", href: "/#about", id: "about" },
-  { name: "Skills", href: "/#skills", id: "skills" },
-  { name: "Projects", href: "/#projects", id: "projects" },
-  // { name: "Blog", href: "/#blog", id: "blog" },
-  // { name: "Contact", href: "/#contact", id: "contact" },
+  { name: { id: "Beranda", en: "Home" }, href: "/#home", id: "home" },
+  { name: { id: "Tentang", en: "About" }, href: "/#about", id: "about" },
+  { name: { id: "Keahlian", en: "Skills" }, href: "/#skills", id: "skills" },
+  { name: { id: "Proyek", en: "Projects" }, href: "/#projects", id: "projects" },
+  // { name: { id: "Blog", en: "Blog" }, href: "/#blog", id: "blog" },
+  // { name: { id: "Kontak", en: "Contact" }, href: "/#contact", id: "contact" },
 ];
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const { lang, toggleLang } = useLanguage();
 
   // Scroll-spy: highlight nav link berdasarkan section yang lagi keliatan di viewport
   useEffect(() => {
@@ -56,7 +58,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
       <Container>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between lg:grid lg:grid-cols-[auto_1fr_auto]">
           {/* Left: Logo */}
           <div className="flex items-center gap-2.5">
             {/* Link ini supaya kalau logo diklik balik ke home */}
@@ -68,20 +70,31 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Right: Desktop Nav + Mobile Toggle */}
-          <div className="flex items-center gap-1">
-            <div className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  onClick={() => setActive(link.id)}
-                  className={navItemClass(link.id)}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
+          {/* Center: Desktop Nav */}
+          <div className="hidden lg:flex items-center justify-center gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.href}
+                onClick={() => setActive(link.id)}
+                className={navItemClass(link.id)}
+              >
+                {link.name[lang]}
+              </a>
+            ))}
+          </div>
+
+          {/* Right: Language Toggle + Mobile Toggle */}
+          <div className="flex items-center justify-end gap-1">
+            <button
+              onClick={toggleLang}
+              className="px-3 py-1.5 text-sm font-bold rounded-full transition-colors font-title bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 cursor-pointer"
+              aria-label={
+                lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"
+              }
+            >
+              {lang === "id" ? "EN" : "ID"}
+            </button>
 
             <button
               className="lg:hidden p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-transform active:scale-90"
@@ -121,9 +134,17 @@ const Navbar = () => {
                 }}
                 className={mobileNavItemClass(link.id)}
               >
-                {link.name}
+                {link.name[lang]}
               </a>
             ))}
+
+            <button
+              onClick={toggleLang}
+              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-50 text-slate-500 hover:text-slate-900"
+            >
+              <Languages className="w-4 h-4" />
+              {lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"}
+            </button>
           </div>
         </Container>
       </div>

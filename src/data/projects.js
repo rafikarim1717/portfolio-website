@@ -3,133 +3,204 @@ export const projects = [
     id: 1,
     slug: "seven-retail",
     title: "Seven Retail",
-    description:
-      "A high-performance corporate platform with an integrated CMS, enabling seamless brand management and dynamic content updates for a leading retail group.",
+    description: {
+      id: "Platform korporat performa tinggi dengan CMS terintegrasi, memungkinkan manajemen brand yang mulus dan update konten dinamis untuk grup retail terkemuka.",
+      en: "A high-performance corporate platform with an integrated CMS, enabling seamless brand management and dynamic content updates for a leading retail group.",
+    },
     image: "/portfolio/seven-retail.png",
     category: "CMS Platform",
     tags: ["Retail", "Next.js", "Headless CMS"],
     link: "https://seven-retail.com",
-    industry: "House of Brands – Multi-Industry Retail Group",
+    industry: {
+      id: "House of Brands – Grup Retail Multi-Industri",
+      en: "House of Brands – Multi-Industry Retail Group",
+    },
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "Headless CMS"],
-    challenge:
-      "Seven Retail is a house of brands running multiple business lines across different industries — from F&B labels like Golden Lamian to aesthetic clinics like Sozo Skin — and needed a full revamp to match their new brand identity. The old site's content was hardcoded, so anything from company updates to open positions on the career page had to go through a developer, slowing them down whenever something needed changing.",
-    solution:
-      "We rebuilt the site on a headless CMS so Seven Retail's team can update content themselves — from general company info to career page listings — without touching code. The design was kept clean and simple, structured around four clear sections: Home, About, Career, and Contact, all styled to match their refreshed brand identity.",
+    challenge: {
+      id: "Seven Retail adalah house of brands yang menjalankan beberapa lini bisnis di berbagai industri — dari label F&B seperti Golden Lamian sampai klinik estetika seperti Sozo Skin — dan butuh revamp total buat menyesuaikan identitas brand barunya. Konten website lama itu hardcoded, jadi dari update perusahaan sampai lowongan kerja di halaman karier harus lewat developer, memperlambat mereka setiap kali ada yang perlu diubah.",
+      en: "Seven Retail is a house of brands running multiple business lines across different industries — from F&B labels like Golden Lamian to aesthetic clinics like Sozo Skin — and needed a full revamp to match their new brand identity. The old site's content was hardcoded, so anything from company updates to open positions on the career page had to go through a developer, slowing them down whenever something needed changing.",
+    },
+    solution: {
+      id: "Kami membangun ulang website di atas headless CMS supaya tim Seven Retail bisa update konten sendiri — dari info umum perusahaan sampai listing di halaman karier — tanpa menyentuh kode. Desainnya dijaga tetap bersih dan simpel, terstruktur dalam empat bagian jelas: Home, About, Career, dan Contact, semuanya disesuaikan dengan identitas brand mereka yang sudah diperbarui.",
+      en: "We rebuilt the site on a headless CMS so Seven Retail's team can update content themselves — from general company info to career page listings — without touching code. The design was kept clean and simple, structured around four clear sections: Home, About, Career, and Contact, all styled to match their refreshed brand identity.",
+    },
     testimonial: {
-      quote:
-        "Rafi dan tim Websync sangat mau memahami kebutuhan kami sebagai klien. Dari proses persiapan hingga tahap akhir, mereka sangat responsif dan mengakomodasi semua permintaan kami. Bahkan saat harus melakukan revisi berkali-kali, mereka selalu siap kapan pun dan membantu dengan baik. Kami sangat puas dengan hasil akhirnya.",
+      quote: {
+        id: "Rafi dan tim Websync sangat responsif dan memahami kebutuhan kami, bahkan saat revisi berkali-kali mereka selalu siap membantu. Kami sangat puas dengan hasil akhirnya.",
+        en: "Rafi and the Websync team were incredibly responsive and understood exactly what we needed — even through multiple rounds of revisions, they were always ready to help. We're very happy with the final result.",
+      },
       name: "Seven Retail",
-      role: "House of Brands",
+      role: { id: "House of Brands", en: "House of Brands" },
+      rating: 4.8,
+      clientLogo: "/logo/logo-seven-new-last.svg",
     },
   },
   {
     id: 2,
-    slug: "ikonoa",
-    title: "Ikonoa",
-    description:
-      "A specialized insurance brokerage platform featuring risk consulting tools and a transparent claims management system for complex insurance workflows.",
+    slug: "pt-ikonoa-solusindo-asia",
+    title: "PT Ikonoa Solusindo Asia",
+    description: {
+      id: "Platform pialang asuransi khusus dengan tools konsultasi risiko dan sistem manajemen klaim yang transparan untuk alur kerja asuransi yang kompleks.",
+      en: "A specialized insurance brokerage platform featuring risk consulting tools and a transparent claims management system for complex insurance workflows.",
+    },
     image: "/portfolio/Ikonoa.png",
     category: "Insurance Platform",
     tags: ["Insurance Tech", "Risk Management"],
     link: "https://www.ikonoa.com/",
-    industry: "Insurance & Risk Management",
+    industry: {
+      id: "Asuransi & Manajemen Risiko",
+      en: "Insurance & Risk Management",
+    },
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "WhatsApp Integration"],
-    challenge:
-      "Ikonoa didn't have a company profile website, so prospective clients had no clear way to understand what the business actually does — its experience as an insurance brokerage, what risk consulting covers, or how the claims process works. Without that context, it was hard to build trust with leads researching the brand for the first time.",
-    solution:
-      "We built a company profile that clearly lays out Ikonoa's industry focus and track record, breaking down services like risk consulting into what's covered and how the process runs step by step. A WhatsApp integration was added on top, so visitors can reach out directly the moment they have a question.",
+    challenge: {
+      id: "Ikonoa belum punya website company profile, jadi calon klien gak punya cara yang jelas buat memahami apa yang sebenarnya dikerjakan bisnis ini — pengalamannya sebagai pialang asuransi, apa saja yang dicakup konsultasi risiko, atau bagaimana proses klaimnya berjalan. Tanpa konteks itu, sulit membangun kepercayaan dengan leads yang lagi riset brand ini untuk pertama kalinya.",
+      en: "Ikonoa didn't have a company profile website, so prospective clients had no clear way to understand what the business actually does — its experience as an insurance brokerage, what risk consulting covers, or how the claims process works. Without that context, it was hard to build trust with leads researching the brand for the first time.",
+    },
+    solution: {
+      id: "Kami membangun company profile yang secara jelas menjabarkan fokus industri dan rekam jejak Ikonoa, memecah layanan seperti konsultasi risiko jadi apa saja yang dicakup dan bagaimana prosesnya berjalan langkah demi langkah. Integrasi WhatsApp ditambahkan di atasnya, supaya pengunjung bisa langsung menghubungi begitu ada pertanyaan.",
+      en: "We built a company profile that clearly lays out Ikonoa's industry focus and track record, breaking down services like risk consulting into what's covered and how the process runs step by step. A WhatsApp integration was added on top, so visitors can reach out directly the moment they have a question.",
+    },
+    testimonial: {
+      quote: {
+        id: "Sangat responsif dan profesional dalam menangani kebutuhan kami. Hasil kerjanya melebihi ekspektasi kami dan tim mereka selalu siap membantu kapan saja.",
+        en: "Extremely responsive and professional in handling our needs. The results exceeded our expectations, and the team was always ready to help whenever we needed them.",
+      },
+      name: "PT Ikonoa Solusindo Asia",
+      role: { id: "Pialang Asuransi", en: "Insurance Brokerage" },
+      rating: 4.9,
+      clientLogo: "/logo/logo-ikonoa.jpg",
+    },
   },
   {
     id: 3,
     slug: "wisma-52",
     title: "Wisma 52",
-    description:
-      "A premium hospitality landing page and property management profile designed to convert leads for high-end residential living in Jakarta.",
+    description: {
+      id: "Landing page hospitality premium dan profil manajemen properti yang dirancang buat mengonversi leads untuk hunian residensial kelas atas di Jakarta.",
+      en: "A premium hospitality landing page and property management profile designed to convert leads for high-end residential living in Jakarta.",
+    },
     image: null,
     category: "Business Profile",
     tags: ["Inn", "Next.js", "Premium"],
     link: "https://wisma52.vercel.app/",
-    industry: "Hospitality & Property",
+    industry: { id: "Hospitality & Properti", en: "Hospitality & Property" },
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "WhatsApp Integration"],
-    challenge:
-      "Wisma 52's biggest issue was communication — prospective tenants kept asking the same questions over and over: room rates, room types, what the rooms actually looked like, house rules, and so on. Without a proper information channel, all of that had to be explained manually, one conversation at a time, before anyone could even decide whether to book.",
-    solution:
-      "We built a website that lays out everything upfront — room types, pricing, location with nearby points of interest, and real room photos — so anyone landing on it from a Google search, or referred in through another channel, already has the full picture before reaching out. WhatsApp is integrated directly on the site, so by the time a conversation starts, it's no longer an info-gathering chat but a straight path to booking.",
+    challenge: {
+      id: "Masalah terbesar Wisma 52 adalah komunikasi — calon penyewa terus-menerus menanyakan pertanyaan yang sama: harga kamar, tipe kamar, seperti apa sebenarnya kamarnya, peraturan rumah, dan seterusnya. Tanpa channel informasi yang proper, semua itu harus dijelaskan manual, satu obrolan di satu waktu, sebelum siapa pun bisa memutuskan buat booking.",
+      en: "Wisma 52's biggest issue was communication — prospective tenants kept asking the same questions over and over: room rates, room types, what the rooms actually looked like, house rules, and so on. Without a proper information channel, all of that had to be explained manually, one conversation at a time, before anyone could even decide whether to book.",
+    },
+    solution: {
+      id: "Kami membangun website yang menjabarkan semuanya di depan — tipe kamar, harga, lokasi dengan titik-titik menarik di sekitarnya, dan foto kamar asli — supaya siapa pun yang mendarat dari pencarian Google, atau direferensikan lewat channel lain, sudah punya gambaran lengkap sebelum menghubungi. WhatsApp diintegrasikan langsung di website, jadi begitu obrolan dimulai, itu bukan lagi sesi tanya-jawab info tapi jalan lurus menuju booking.",
+      en: "We built a website that lays out everything upfront — room types, pricing, location with nearby points of interest, and real room photos — so anyone landing on it from a Google search, or referred in through another channel, already has the full picture before reaching out. WhatsApp is integrated directly on the site, so by the time a conversation starts, it's no longer an info-gathering chat but a straight path to booking.",
+    },
     testimonial: {
-      quote:
-        "Timnya sabar banget jelasin setiap tahap prosesnya, komunikasinya juga responsif dan ramah dari awal sampai project selesai.",
+      quote: {
+        id: "Timnya sabar banget jelasin setiap tahap prosesnya, komunikasinya juga responsif dan ramah dari awal sampai project selesai.",
+        en: "The team was incredibly patient explaining every step of the process, and communication stayed responsive and friendly from start to finish.",
+      },
       name: "Fatih Azka",
-      role: "Pemilik Kost Wisma 52",
+      role: { id: "Pemilik Wisma 52", en: "Owner, Wisma 52" },
+      rating: 4.8,
+      clientLogo: "/logo/logo-wisma-52.png",
     },
   },
   {
     id: 4,
-    slug: "genova",
-    title: "Genova",
-    description:
-      "A premium business profile and product catalog for a Jakarta-based syrup manufacturer. Featuring a seamless product showcase with direct integration to Tokopedia for streamlined purchasing.",
+    slug: "genova-indonesia",
+    title: "Genova Indonesia",
+    description: {
+      id: "Company profile premium dan katalog produk untuk produsen sirup asal Jakarta. Menampilkan showcase produk yang mulus dengan integrasi langsung ke Tokopedia buat kemudahan pembelian.",
+      en: "A premium business profile and product catalog for a Jakarta-based syrup manufacturer. Featuring a seamless product showcase with direct integration to Tokopedia for streamlined purchasing.",
+    },
     image: "/portfolio/Genova.png",
     category: "E-commerce Catalog",
     tags: ["F&B Industry", "E-commerce", "Next.js"],
     link: "https://genova-indonesia.id",
-    industry: "Food & Beverage (F&B)",
+    industry: { id: "Makanan & Minuman (F&B)", en: "Food & Beverage (F&B)" },
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "Tokopedia API", "WhatsApp Integration"],
     status: "inactive",
-    challenge:
-      "Genova produces and sells its syrup products exclusively through Tokopedia, but had no dedicated space to properly showcase its full product catalog or where its physical branches are located — a marketplace listing alone isn't built for that kind of browsing or brand presentation.",
-    solution:
-      "We built a catalog-focused website that showcases Genova's full product range and branch locations, with each product linking straight to its Tokopedia listing so checkout stays exactly where it already worked. A WhatsApp integration was added on top for direct inquiries.",
+    challenge: {
+      id: "Genova memproduksi dan menjual produk sirupnya secara eksklusif lewat Tokopedia, tapi belum punya ruang khusus buat menampilkan katalog produk lengkapnya atau lokasi cabang fisiknya — listing di marketplace saja gak dibuat buat jenis browsing atau presentasi brand seperti itu.",
+      en: "Genova produces and sells its syrup products exclusively through Tokopedia, but had no dedicated space to properly showcase its full product catalog or where its physical branches are located — a marketplace listing alone isn't built for that kind of browsing or brand presentation.",
+    },
+    solution: {
+      id: "Kami membangun website berfokus katalog yang menampilkan seluruh jajaran produk dan lokasi cabang Genova, dengan tiap produk yang terhubung langsung ke listing Tokopedia-nya sehingga checkout tetap di tempat yang sudah berjalan baik. Integrasi WhatsApp ditambahkan di atasnya buat pertanyaan langsung.",
+      en: "We built a catalog-focused website that showcases Genova's full product range and branch locations, with each product linking straight to its Tokopedia listing so checkout stays exactly where it already worked. A WhatsApp integration was added on top for direct inquiries.",
+    },
     testimonial: {
-      quote:
-        "Sangat puas dengan hasilnya maupun dengan pelayanan yang responsif. Sangat direkomendasikan.",
+      quote: {
+        id: "Sangat puas dengan hasilnya maupun dengan pelayanan yang responsif. Sangat direkomendasikan.",
+        en: "Very happy with both the result and the responsive service. Highly recommended.",
+      },
       name: "Genova Indonesia",
-      role: "Produsen Sirup Genova",
+      role: { id: "Produsen Sirup", en: "Syrup Manufacturer" },
+      rating: 4.7,
+      clientLogo: "/logo/logo-genova.jpg",
     },
   },
   {
     id: 5,
     slug: "pt-multi-sarana-pelindung",
     title: "PT Multi Sarana Pelindung",
-    description:
-      "A professional company profile for an insurance and protection services provider, presenting their services and credibility to build trust with prospective clients.",
+    description: {
+      id: "Company profile profesional untuk penyedia layanan asuransi dan proteksi, menampilkan layanan dan kredibilitas mereka buat membangun kepercayaan dengan calon klien.",
+      en: "A professional company profile for an insurance and protection services provider, presenting their services and credibility to build trust with prospective clients.",
+    },
     image: null,
     category: "Company Profile",
     tags: ["Insurance", "Trust Building", "HTML"],
     link: "https://www.multisaranapelindung.com/",
-    industry: "Insurance",
+    industry: { id: "Asuransi", en: "Insurance" },
     location: "Jakarta, Indonesia",
     techStack: ["HTML", "Tailwind CSS", "Google Business Profile"],
-    challenge:
-      "PT Multi Sarana Pelindung is an insurance company that never had a website, which made it hard to establish credibility with prospective clients — there was no place to show their vision and mission, what business lines they cover, or who their partners are.",
-    solution:
-      "We built a clear company profile: a homepage covering their vision, mission, business lines, and partners; a dedicated General Insurance page explaining what's covered and how the process works; a gallery; a location page with address and visiting hours; and a contact page with an email form for inquiries. We also set up their Google Business Profile alongside the website, so the company shows up properly when people search for them directly.",
+    challenge: {
+      id: "PT Multi Sarana Pelindung adalah perusahaan asuransi yang belum pernah punya website, yang bikin susah membangun kredibilitas dengan calon klien — gak ada tempat buat menunjukkan visi dan misi mereka, lini bisnis apa saja yang dicakup, atau siapa saja partner mereka.",
+      en: "PT Multi Sarana Pelindung is an insurance company that never had a website, which made it hard to establish credibility with prospective clients — there was no place to show their vision and mission, what business lines they cover, or who their partners are.",
+    },
+    solution: {
+      id: "Kami membangun company profile yang jelas: homepage yang mencakup visi, misi, lini bisnis, dan partner mereka; halaman General Insurance khusus yang menjelaskan apa saja yang dicakup dan bagaimana prosesnya; galeri; halaman lokasi dengan alamat dan jam kunjungan; serta halaman contact dengan form email buat pertanyaan. Kami juga men-setup Google Business Profile mereka bersamaan dengan website, jadi perusahaan ini muncul dengan benar saat orang mencari mereka langsung.",
+      en: "We built a clear company profile: a homepage covering their vision, mission, business lines, and partners; a dedicated General Insurance page explaining what's covered and how the process works; a gallery; a location page with address and visiting hours; and a contact page with an email form for inquiries. We also set up their Google Business Profile alongside the website, so the company shows up properly when people search for them directly.",
+    },
     testimonial: {
-      quote:
-        "Hasil websitenya bagus meski harganya relatif terjangkau dibanding layanan lain. Sangat cepat dalam merespons pertanyaan, support dari awal tahap desain, dan membantu konfigurasi email custom juga.",
+      quote: {
+        id: "Hasil websitenya bagus meski harganya relatif terjangkau dibanding layanan lain. Sangat cepat dalam merespons pertanyaan, support dari awal tahap desain, dan membantu konfigurasi email custom juga.",
+        en: "The website turned out great, and the price was quite affordable compared to other services. Super quick to respond to questions, supported us from the design stage, and even helped set up our custom email.",
+      },
       name: "PT Multi Sarana Pelindung",
-      role: "Asuransi",
+      role: { id: "Asuransi", en: "Insurance" },
+      rating: 4.8,
+      clientLogo: "/logo/logo-multi-sarana-pelindung.webp",
     },
   },
   {
     id: 6,
     slug: "aura-clinic",
     title: "Aura Clinic",
-    description:
-      "A company profile mockup for an aesthetic clinic, showcasing treatments and facilities with a clean, trustworthy design to build patient confidence.",
+    description: {
+      id: "Mockup company profile untuk klinik estetika, menampilkan treatment dan fasilitas dengan desain yang bersih dan terpercaya buat membangun kepercayaan pasien.",
+      en: "A company profile mockup for an aesthetic clinic, showcasing treatments and facilities with a clean, trustworthy design to build patient confidence.",
+    },
     image: null,
     category: "Business Profile",
     tags: ["Clinic", "Business Profile", "React"],
     link: "https://aura-clinic-pi.vercel.app/",
-    industry: "Healthcare & Aesthetics",
+    industry: {
+      id: "Kesehatan & Estetika",
+      en: "Healthcare & Aesthetics",
+    },
     location: "Jakarta, Indonesia",
     techStack: ["React", "Static HTML"],
-    challenge:
-      "This is a dummy project built to demonstrate how Websync approaches a common scenario: a newly-opened aesthetic clinic with zero online presence, needing to earn trust from complete strangers before they'll book a treatment they've never tried. New clinics face a specific problem — visitors don't just want a list of services, they need each treatment explained clearly (what it is, how it works, who it's for) before they'll feel comfortable booking.",
-    solution:
-      "We designed a full multi-page site around that trust-building need: a homepage and About page introducing the clinic's story, vision, and doctors; a dedicated Treatments hub linking out to six individual treatment pages, each following the same structure — benefits, step-by-step process, who it's suitable for, and a mini-FAQ — so visitors get real answers without having to ask; plus a general FAQ page and a Contact page with a WhatsApp CTA for instant booking. The whole site is static, self-contained HTML with React bundled inline, so it runs with zero server or build setup.",
+    challenge: {
+      id: "Ini adalah proyek dummy yang dibangun buat mendemonstrasikan bagaimana Websync mendekati skenario umum: klinik estetika yang baru buka dengan online presence nol, yang perlu mendapat kepercayaan dari orang asing sebelum mereka mau booking treatment yang belum pernah mereka coba. Klinik baru menghadapi masalah spesifik — pengunjung gak cuma mau lihat daftar layanan, mereka butuh tiap treatment dijelaskan dengan jelas (apa itu, bagaimana cara kerjanya, buat siapa) sebelum mereka merasa nyaman buat booking.",
+      en: "This is a dummy project built to demonstrate how Websync approaches a common scenario: a newly-opened aesthetic clinic with zero online presence, needing to earn trust from complete strangers before they'll book a treatment they've never tried. New clinics face a specific problem — visitors don't just want a list of services, they need each treatment explained clearly (what it is, how it works, who it's for) before they'll feel comfortable booking.",
+    },
+    solution: {
+      id: "Kami merancang website multi-halaman lengkap di sekitar kebutuhan membangun kepercayaan itu: homepage dan halaman About yang mengenalkan cerita klinik, visi, dan para dokter; hub Treatments khusus yang menghubungkan ke enam halaman treatment individual, masing-masing mengikuti struktur yang sama — manfaat, proses langkah demi langkah, siapa yang cocok, dan mini-FAQ — supaya pengunjung dapat jawaban nyata tanpa perlu bertanya; ditambah halaman FAQ umum dan halaman Contact dengan CTA WhatsApp buat booking instan. Seluruh website itu statis, HTML self-contained dengan React yang di-bundle inline, jadi jalan tanpa server atau build setup sama sekali.",
+      en: "We designed a full multi-page site around that trust-building need: a homepage and About page introducing the clinic's story, vision, and doctors; a dedicated Treatments hub linking out to six individual treatment pages, each following the same structure — benefits, step-by-step process, who it's suitable for, and a mini-FAQ — so visitors get real answers without having to ask; plus a general FAQ page and a Contact page with a WhatsApp CTA for instant booking. The whole site is static, self-contained HTML with React bundled inline, so it runs with zero server or build setup.",
+    },
   },
 ];

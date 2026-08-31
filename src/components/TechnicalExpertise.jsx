@@ -1,6 +1,22 @@
-// components/sections/TechnicalExpertise.jsx
-import Container from "./Container";
+"use client";
 
+import Container from "./Container";
+import { useLanguage } from "@/context/LanguageContext";
+
+const SECTION_TEXT = {
+  id: {
+    heading: "Fondasi Teknis",
+    subheading:
+      "Teknologi inti yang saya pakai buat membangun sistem yang reliable dan bisa diandalkan.",
+  },
+  en: {
+    heading: "Technical Foundation",
+    subheading:
+      "The core technologies I use to build reliable, scalable systems that actually work.",
+  },
+};
+
+// Nama grup & skill sengaja tetap Inggris — istilah teknis, bukan konten yang diterjemahkan
 const expertiseGroups = [
   {
     title: "Frontend",
@@ -16,15 +32,6 @@ const expertiseGroups = [
     ],
   },
   {
-    title: "AI Development",
-    items: [
-      "OpenAI API Integration",
-      "AI Content Generation",
-      "Workflow Automation",
-      "AI-Driven Rapid Prototyping",
-    ],
-  },
-  {
     title: "Tools & Workflow",
     items: [
       "Git/GitHub",
@@ -35,25 +42,10 @@ const expertiseGroups = [
   },
 ];
 
-const services = [
-  {
-    title: "Custom Dashboard & Tools",
-    description:
-      "Bespoke internal dashboards and business tools built from scratch with clean, maintainable code and full documentation.",
-  },
-  {
-    title: "AI Integration",
-    description:
-      "OpenAI API integration, content generation tools, and custom AI workflows.",
-  },
-  {
-    title: "Payment Gateway Integration",
-    description:
-      "Secure payment gateway integration with multi-currency support for modern web platforms.",
-  },
-];
-
 export default function TechnicalExpertise() {
+  const { lang } = useLanguage();
+  const t = SECTION_TEXT[lang];
+
   return (
     <section
       id="skills"
@@ -67,26 +59,24 @@ export default function TechnicalExpertise() {
             id="technical-expertise-heading"
             className="text-3xl font-title font-bold tracking-tight text-[#333] mb-4"
           >
-            Technical Expertise
+            {t.heading}
           </h2>
           <p className="text-base font-title font-normal text-[#6c757d] max-w-2xl mx-auto">
-            A modern full-stack toolkit — React, Next.js, and Golang — built
-            to ship AI-integrated, production-ready systems, not
-            proof-of-concepts.
+            {t.subheading}
           </p>
         </header>
 
         {/* Expertise Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {expertiseGroups.map((group) => {
             return (
               <section
                 key={group.title}
                 className="bg-card/50 backdrop-blur-sm rounded-lg p-5 border border-slate-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
-    hover:-translate-y-1.5 transition-all duration-300 ease-out 
+    hover:-translate-y-1.5 transition-all duration-300 ease-out
     cursor-default"
               >
-                <h3 className="text-base font-title font-semibold text-[#333] mb-6 text-center text-left">
+                <h3 className="text-base font-title font-semibold text-[#333] mb-6 text-center">
                   {group.title}
                 </h3>
 
@@ -111,35 +101,6 @@ export default function TechnicalExpertise() {
             );
           })}
         </div>
-
-        {/* Specialized Services */}
-        {/* <section
-          className="mt-20 max-w-3xl mx-auto"
-          aria-labelledby="specialized-services-heading"
-        >
-          <h3
-            id="specialized-services-heading"
-            className="text-2xl font-semibold text-slate-900 text-center mb-10"
-          >
-            Specialized Services
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <article
-                key={service.title}
-                className="border border-slate-200 rounded-xl p-4 text-center"
-              >
-                <h4 className="font-semibold text-[#333] mb-2">
-                  {service.title}
-                </h4>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  {service.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </section> */}
       </Container>
     </section>
   );
