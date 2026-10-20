@@ -56,14 +56,14 @@ const HowIWork = () => {
   const t = SECTION_TEXT[lang];
 
   return (
-    <section id="process" className="py-20 bg-blue-600/5">
+    <section id="process" className="py-20 bg-surface-dark">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-title font-bold text-3xl lg:text-4xl text-[#333] tracking-tight mb-4">
+          <h2 className="font-title font-bold text-3xl lg:text-4xl text-white tracking-tight mb-4">
             {t.heading}
           </h2>
-          <p className="font-title font-normal text-base text-[#6c757d] max-w-2xl mx-auto">
+          <p className="font-title font-normal text-base lg:text-lg text-on-dark-muted leading-relaxed max-w-2xl mx-auto">
             {t.subheading}
           </p>
         </div>
@@ -75,21 +75,21 @@ const HowIWork = () => {
               key={step.number}
               className="
                 group relative flex flex-col gap-4 p-6 rounded-xl h-full border
-                bg-white/70 leading-5 border-slate-200
-                hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+                bg-white/5 leading-5 border-white/10
+                hover:border-primary-light/50 hover:shadow-xl hover:shadow-black/20
                 hover:-translate-y-1.5 transition-all duration-300 ease-out
                 cursor-default
               "
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 font-title font-bold text-lg transition-colors duration-300 group-hover:bg-blue-100">
+              <div className="w-12 h-12 rounded-xl bg-primary-light/15 flex items-center justify-center text-primary-light font-title font-bold text-lg transition-colors duration-300 group-hover:bg-primary-light/25">
                 {step.number}
               </div>
 
-              <h3 className="font-title font-semibold text-[17px] text-[#333333]">
+              <h3 className="font-title font-semibold text-lg text-white">
                 {step.title[lang]}
               </h3>
 
-              <p className="font-body font-normal text-[13px] text-[#6c757d] leading-5">
+              <p className="font-body font-normal text-[15px] text-on-dark-muted leading-relaxed">
                 {step.description[lang]}
               </p>
             </div>

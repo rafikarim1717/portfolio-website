@@ -1,21 +1,15 @@
-import { Inter, Poppins } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500"], // regular, medium
-  variable: "--font-inter",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"], // regular, semibold, bold
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
 });
 
 const SITE_URL = "https://portfolio-website-beta-kohl.vercel.app";
-const SITE_TITLE = "Rafi - Software Engineer";
+const SITE_TITLE = "Rafi Karim — Jasa Pembuatan Website & Toko Online Jakarta";
 // Metadata (title/description/OG) dikunci ke Bahasa Indonesia — ini gak ikut
 // toggle bahasa client-side, jadi disamain sama bahasa default situs.
 const SITE_DESCRIPTION =
@@ -27,7 +21,8 @@ export const metadata = {
   description: SITE_DESCRIPTION,
   keywords: [
     "Rafi",
-    "Software Engineer",
+    "Web Developer Jakarta",
+    "Jasa Pembuatan Website",
     "Full-Stack Developer",
     "Next.js Developer",
     "Web Development",
@@ -72,7 +67,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+      <body className={`${jakarta.variable} antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

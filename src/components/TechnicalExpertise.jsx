@@ -57,11 +57,11 @@ export default function TechnicalExpertise() {
         <header className="text-center mb-16">
           <h2
             id="technical-expertise-heading"
-            className="text-3xl font-title font-bold tracking-tight text-[#333] mb-4"
+            className="font-title font-bold text-3xl lg:text-4xl tracking-tight text-ink mb-4"
           >
             {t.heading}
           </h2>
-          <p className="text-base font-title font-normal text-[#6c757d] max-w-2xl mx-auto">
+          <p className="text-base lg:text-lg font-body font-normal text-muted leading-relaxed max-w-2xl mx-auto">
             {t.subheading}
           </p>
         </header>
@@ -72,11 +72,11 @@ export default function TechnicalExpertise() {
             return (
               <section
                 key={group.title}
-                className="bg-card/50 backdrop-blur-sm rounded-lg p-5 border border-slate-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+                className="bg-card/50 backdrop-blur-sm rounded-lg p-5 border border-slate-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
     hover:-translate-y-1.5 transition-all duration-300 ease-out
     cursor-default"
               >
-                <h3 className="text-base font-title font-semibold text-[#333] mb-6 text-center">
+                <h3 className="text-base font-title font-semibold text-ink mb-6 text-center">
                   {group.title}
                 </h3>
 
@@ -85,12 +85,12 @@ export default function TechnicalExpertise() {
                     <li
                       key={item}
                       className="
-    bg-blue-50 text-blue-600 font-body font-medium px-4 py-2 rounded-lg text-xs text-center
-    border border-blue-100/50 transition-all duration-300 cursor-pointer
+    bg-tint text-primary font-body font-medium px-4 py-2 rounded-lg text-xs text-center
+    border border-tint-strong/50 transition-all duration-300 cursor-pointer
     /* Efek saat li ini di-hover langsung */
-    hover:bg-blue-100 hover:border-blue-300
+    hover:bg-tint-strong hover:border-primary/40
     /* Efek saat card (parent) di-hover (biar barengan) */
-    group-hover:border-blue-200
+    group-hover:border-primary/25
   "
                     >
                       {item}

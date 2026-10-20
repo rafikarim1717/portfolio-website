@@ -8,10 +8,11 @@ import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-surface">
       <Navbar />
       <Hero />
       <About />
@@ -23,6 +24,7 @@ export default function Home() {
       <Footer />
 
       <BackToTop />
+      <FloatingWhatsApp />
     </main>
   );
 }

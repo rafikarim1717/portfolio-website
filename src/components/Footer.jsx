@@ -27,12 +27,12 @@ const Footer = () => {
   const { lang } = useLanguage();
 
   return (
-    <footer className="bg-white pt-8 pb-8">
+    <footer className="bg-surface pt-8 pb-8 border-t border-line">
       <div className="container mx-auto px-6">
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <p className="text-sm text-[#6c757d] font-medium">
-              © {currentYear} {FOOTER_DATA.brand.name} – Software Engineer.{" "}
+            <p className="text-sm text-muted font-medium">
+              © {currentYear} {FOOTER_DATA.brand.name} – Web Developer.{" "}
               {COPYRIGHT_TEXT[lang]}
             </p>
           </div>
@@ -47,7 +47,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-500 hover:text-blue-600 hover:border-blue-200 transition-all"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-500 hover:text-primary hover:border-primary/25 transition-all"
                 >
                   <social.icon className="w-4 h-4" />
                 </Link>

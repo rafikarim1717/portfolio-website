@@ -45,13 +45,13 @@ const Navbar = () => {
 
   const navItemClass = (id) =>
     `px-3 py-2 text-sm font-semibold rounded-lg transition-colors font-title hover:bg-slate-100 ${
-      active === id ? "text-blue-600 bg-blue-50" : "text-[#333]"
+      active === id ? "text-primary bg-tint" : "text-ink"
     }`;
 
   const mobileNavItemClass = (id) =>
     `block px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-50 ${
       active === id
-        ? "text-blue-600 bg-blue-50"
+        ? "text-primary bg-tint"
         : "text-slate-500 hover:text-slate-900"
     }`;
 
@@ -64,9 +64,9 @@ const Navbar = () => {
             {/* Link ini supaya kalau logo diklik balik ke home */}
             <Link
               href="/"
-              className="relative font-title font-bold text-lg text-[#333] transition-transform active:scale-95"
+              className="relative font-title font-bold text-lg text-ink transition-transform active:scale-95"
             >
-              Rafi
+              Rafi Karim
             </Link>
           </div>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="flex items-center justify-end gap-1">
             <button
               onClick={toggleLang}
-              className="px-3 py-1.5 text-sm font-bold rounded-full transition-colors font-title bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 cursor-pointer"
+              className="px-3 py-1.5 text-sm font-bold rounded-full transition-colors font-title bg-tint text-primary border border-tint-strong hover:bg-tint-strong cursor-pointer"
               aria-label={
                 lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"
               }

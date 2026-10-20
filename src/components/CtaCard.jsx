@@ -25,12 +25,12 @@ const CtaCard = () => {
   const t = TEXT[lang];
 
   return (
-    <div className="text-card-foreground flex flex-col gap-6 rounded-2xl border bg-gradient-to-r from-blue-600/5 to-blue-500/10 border-blue-500/20 backdrop-blur-md max-w-3xl mx-auto w-full p-10 text-center shadow-lg shadow-blue-500/5">
+    <div className="text-card-foreground flex flex-col gap-6 rounded-2xl bg-surface-dark max-w-4xl mx-auto w-full p-10 lg:p-14 text-center shadow-xl shadow-ink/10">
       <div>
-        <h3 className="text-lg text-[#333] mb-3 font-semibold font-title tracking-tight">
+        <h3 className="text-2xl lg:text-3xl text-white mb-3 font-bold font-title tracking-tight">
           {t.title}
         </h3>
-        <p className="font-title font-normal text-[#6c757d] text-sm mb-8 max-w-lg mx-auto">
+        <p className="font-body font-normal text-on-dark-muted text-base lg:text-lg leading-relaxed mb-8 max-w-lg mx-auto">
           {t.description}
         </p>
 
@@ -41,9 +41,9 @@ const CtaCard = () => {
           className="
             inline-flex items-center justify-center gap-2 whitespace-nowrap
             text-sm font-medium transition-all duration-300
-            bg-[#4251EB] hover:bg-[#3845C8] hover:shadow-lg hover:shadow-[#4251EB]/30
-            active:scale-95 h-10 rounded-lg px-6 text-white
-            outline-none focus-visible:ring-2 focus-visible:ring-[#4251EB]/50
+            bg-white hover:bg-tint hover:shadow-lg hover:shadow-black/20
+            active:scale-95 h-12 rounded-lg px-7 text-surface-dark font-semibold
+            outline-none focus-visible:ring-2 focus-visible:ring-primary-light/60
             cursor-pointer
           "
         >

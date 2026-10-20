@@ -28,14 +28,14 @@ const Testimonials = () => {
   const t = SECTION_TEXT[lang];
 
   return (
-    <section id="testimonials" className="py-20 bg-blue-600/5">
+    <section id="testimonials" className="py-20 bg-surface">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-title font-bold text-3xl lg:text-4xl text-[#333] tracking-tight mb-4">
+          <h2 className="font-title font-bold text-3xl lg:text-4xl text-ink tracking-tight mb-4">
             {t.heading}
           </h2>
-          <p className="font-title font-normal text-base text-[#6c757d] max-w-2xl mx-auto">
+          <p className="font-title font-normal text-base lg:text-lg text-muted leading-relaxed max-w-2xl mx-auto">
             {t.subheading}
           </p>
         </div>
@@ -48,7 +48,7 @@ const Testimonials = () => {
               className="
                 group flex flex-col gap-6 p-6 rounded-xl h-full border
                 bg-white border-slate-200
-                hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+                hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
                 hover:-translate-y-1.5 transition-all duration-300 ease-out
                 cursor-default
               "
@@ -66,21 +66,21 @@ const Testimonials = () => {
 
                 <div className="flex items-center gap-1 shrink-0">
                   <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  <span className="font-title font-semibold text-sm text-[#333]">
+                  <span className="font-title font-semibold text-sm text-ink">
                     {testimonial.rating}
                   </span>
                 </div>
               </div>
 
-              <p className="font-body text-sm text-[#333] leading-normal flex-grow">
+              <p className="font-body text-[15px] text-ink leading-relaxed flex-grow">
                 &ldquo;{testimonial.quote[lang]}&rdquo;
               </p>
 
               <div className="pt-4 border-t-2 border-slate-100">
-                <p className="font-title font-semibold text-sm text-[#333]">
+                <p className="font-title font-semibold text-sm text-ink">
                   {testimonial.name}
                 </p>
-                <p className="font-body text-xs text-[#6c757d]">
+                <p className="font-body text-sm text-muted">
                   {testimonial.role[lang]}
                 </p>
               </div>

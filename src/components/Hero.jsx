@@ -19,7 +19,7 @@ const HERO_DATA = {
   },
 };
 
-const role = "Software Engineer";
+const role = "Web Developer · Jakarta";
 
 const cta = {
   mobileLabel: "WhatsApp",
@@ -51,20 +51,20 @@ const Hero = () => {
       <Container>
         <div className="max-w-3xl mx-auto text-center">
           {/* Badge Role */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs md:text-sm font-bold uppercase tracking-widest mb-6 border border-blue-100">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tint text-primary text-xs md:text-sm font-bold uppercase tracking-widest mb-6 border border-tint-strong">
             {role}
           </div>
 
           {/* Title - Value proposition, not a generic greeting */}
-          <h1 className="font-title font-bold text-3xl md:text-4xl lg:text-6xl text-[#333333] tracking-tight mb-4">
+          <h1 className="font-title font-bold text-3xl md:text-4xl lg:text-6xl text-ink tracking-tight mb-4">
             {titleWords.slice(0, -3).join(" ")}{" "}
-            <span className="text-blue-600">
+            <span className="text-primary">
               {titleWords.slice(-3).join(" ")}
             </span>
           </h1>
 
           {/* Description */}
-          <p className="font-title font-normal text-base text-[#6c757d] leading-6 max-w-3xl mx-auto mb-8">
+          <p className="font-body font-normal text-base lg:text-lg text-muted leading-relaxed max-w-3xl mx-auto mb-8">
             {t.description}
           </p>
 
@@ -74,7 +74,7 @@ const Hero = () => {
               href={cta.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 font-body cursor-pointer font-medium inline-flex items-center justify-center gap-2 rounded-full bg-[#4251EB] text-white px-7 sm:px-9 text-sm shadow-md shadow-[#4251EB]/20 transition-all duration-300 hover:bg-[#3845C8] hover:shadow-lg hover:shadow-[#4251EB]/30 active:scale-95 whitespace-nowrap"
+              className="h-12 font-body cursor-pointer font-medium inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 sm:px-9 text-sm shadow-md shadow-primary/20 transition-all duration-300 hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95 whitespace-nowrap"
             >
               <cta.icon className="w-4 h-4" />
               <span className="sm:hidden">{cta.mobileLabel}</span>

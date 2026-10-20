@@ -71,7 +71,7 @@ const ProjectDetailClient = ({ project }) => {
           {/* Breadcrumb */}
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 mb-8 bg-white text-blue-600 border border-blue-200 shadow-sm text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wide hover:bg-blue-50 hover:border-blue-300 transition-colors"
+            className="inline-flex items-center gap-2 mb-8 bg-white text-primary border border-primary/25 shadow-sm text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wide hover:bg-tint hover:border-primary/40 transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             {t.backToProjects}
@@ -79,10 +79,10 @@ const ProjectDetailClient = ({ project }) => {
 
           {/* Header */}
           <div className="max-w-3xl mb-10">
-            <h1 className="font-title font-bold text-3xl lg:text-5xl text-[#333] tracking-tight mb-4">
+            <h1 className="font-title font-bold text-3xl lg:text-5xl text-ink tracking-tight mb-4">
               {project.title}
             </h1>
-            <p className="font-body text-base lg:text-lg text-[#6c757d] leading-normal">
+            <p className="font-body text-base lg:text-lg text-muted leading-normal">
               {project.description[lang]}
             </p>
           </div>
@@ -99,7 +99,7 @@ const ProjectDetailClient = ({ project }) => {
                 priority
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#4251EB] to-[#3845C8]">
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary to-primary-hover">
                 <span className="font-title font-bold text-6xl text-white/90 tracking-wide">
                   {getInitials(project.title)}
                 </span>
@@ -111,15 +111,15 @@ const ProjectDetailClient = ({ project }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6 pb-10 mb-12 border-b border-slate-200">
             {metaItems.map(({ icon: Icon, label, value }) => (
               <div key={label} className="flex items-start gap-3 min-w-0">
-                <div className="w-10 h-10 shrink-0 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                <div className="w-10 h-10 shrink-0 rounded-lg bg-tint flex items-center justify-center text-primary">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-body text-xs text-[#6c757d] mb-0.5">
+                  <p className="font-body text-xs text-muted mb-0.5">
                     {label}
                   </p>
                   <p
-                    className="font-title font-medium text-sm text-[#333] truncate"
+                    className="font-title font-medium text-sm text-ink truncate"
                     title={value}
                   >
                     {value}
@@ -135,17 +135,17 @@ const ProjectDetailClient = ({ project }) => {
               className="
                 p-6 rounded-xl h-full border
                 bg-white border-slate-200
-                hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+                hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
                 hover:-translate-y-1.5 transition-all duration-300 ease-out
               "
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-tint flex items-center justify-center text-primary mb-4">
                 <Layers className="w-5 h-5" />
               </div>
-              <h2 className="font-title font-bold text-lg text-[#333] mb-3">
+              <h2 className="font-title font-bold text-lg text-ink mb-3">
                 {t.theChallenge}
               </h2>
-              <p className="font-body text-sm text-[#6c757d] leading-normal">
+              <p className="font-body text-[15px] text-muted leading-relaxed">
                 {project.challenge[lang]}
               </p>
             </div>
@@ -154,17 +154,17 @@ const ProjectDetailClient = ({ project }) => {
               className="
                 p-6 rounded-xl h-full border
                 bg-white border-slate-200
-                hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+                hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
                 hover:-translate-y-1.5 transition-all duration-300 ease-out
               "
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-tint flex items-center justify-center text-primary mb-4">
                 <Lightbulb className="w-5 h-5" />
               </div>
-              <h2 className="font-title font-bold text-lg text-[#333] mb-3">
+              <h2 className="font-title font-bold text-lg text-ink mb-3">
                 {t.theSolution}
               </h2>
-              <p className="font-body text-sm text-[#6c757d] leading-normal">
+              <p className="font-body text-[15px] text-muted leading-relaxed">
                 {project.solution[lang]}
               </p>
             </div>
@@ -180,7 +180,7 @@ const ProjectDetailClient = ({ project }) => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 bg-[#4251EB] hover:bg-[#3845C8] hover:shadow-lg hover:shadow-[#4251EB]/30 active:scale-95 h-10 rounded-lg px-6 text-white outline-none focus-visible:ring-2 focus-visible:ring-[#4251EB]/50 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 bg-primary hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95 h-10 rounded-lg px-6 text-white outline-none focus-visible:ring-2 focus-visible:ring-primary/50 cursor-pointer"
             >
               {t.visitLive}
               <ExternalLink className="w-4 h-4" />

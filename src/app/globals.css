@@ -1,14 +1,46 @@
 @import "tailwindcss";
 
+/*
+ * DESIGN TOKENS — single source of truth.
+ * Mau ganti warna brand? Cukup ubah nilai di :root ini,
+ * semua komponen ikut berubah (pakai class: bg-primary, text-ink, dll).
+ */
 :root {
-  /* Kita ganti hex solid jadi linear gradient */
-  --background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  --foreground: #171717;
+  /* Brand accent */
+  --primary: #0f766e;
+  --primary-hover: #115e59;
+  --primary-light: #5eead4; /* aksen di atas surface-dark */
+  --tint: #f0fdfa; /* badge, icon chip, pill */
+  --tint-strong: #ccfbf1;
+
+  /* Neutrals */
+  --ink: #0f172a; /* heading & body text */
+  --muted: #475569; /* secondary text */
+  --line: #e2e8f0; /* border */
+
+  /* Surfaces (ritme section: white → soft → dark) */
+  --surface: #fbfbf9; /* off-white, bukan putih total */
+  --surface-soft: #f1f4f2;
+  --surface-dark: #0b2e2b;
+  --on-dark-muted: #a7c4bf; /* secondary text di atas surface-dark */
 }
 
 @theme inline {
-  --font-body: var(--font-inter);
-  --font-title: var(--font-poppins);
+  --font-body: var(--font-jakarta);
+  --font-title: var(--font-jakarta);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-tint: var(--tint);
+  --color-tint-strong: var(--tint-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-dark: var(--surface-dark);
+  --color-on-dark-muted: var(--on-dark-muted);
 }
 
 html {
@@ -16,13 +48,10 @@ html {
 }
 
 body {
-  /* Gunakan background-image karena ini gradient */
-  background-image: var(--background);
-  /* Tambahkan min-height biar gradient-nya nggak kepotong kalau konten dikit */
+  background-color: var(--surface);
   min-height: 100vh;
-  /* Tambahkan background-attachment: fixed kalau lo mau gradient-nya diem pas di-scroll */
-  background-attachment: fixed;
-  color: var(--foreground);
+  color: var(--ink);
+  letter-spacing: 0.01em; /* Jakarta agak rapat di ukuran kecil */
   line-height: inherit;
   margin: 0;
 }

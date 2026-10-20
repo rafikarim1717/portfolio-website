@@ -10,14 +10,14 @@ const contactData = [
   {
     id: 1,
     title: { id: "Lokasi", en: "Location" },
-    value: { id: "Tersedia Secara Global", en: "Available Globally" },
+    value: { id: "Jakarta, Indonesia", en: "Jakarta, Indonesia" },
     description: {
-      id: "Tersedia buat kerja remote di seluruh dunia",
-      en: "Available for remote work worldwide",
+      id: "Terbuka untuk proyek remote",
+      en: "Available for remote projects",
     },
     icon: MapPin,
-    color: "text-blue-600",
-    bg: "bg-blue-50",
+    color: "text-primary",
+    bg: "bg-tint",
   },
   {
     id: 2,
@@ -28,8 +28,8 @@ const contactData = [
       en: "Response within 24 hours",
     },
     icon: Mail,
-    color: "text-blue-600",
-    bg: "bg-blue-50",
+    color: "text-primary",
+    bg: "bg-tint",
     link: "mailto:karemrafi@gmail.com",
   },
   {
@@ -44,8 +44,8 @@ const contactData = [
       en: "Quick turnaround for international clients",
     },
     icon: Clock,
-    color: "text-blue-600",
-    bg: "bg-blue-50",
+    color: "text-primary",
+    bg: "bg-tint",
   },
 ];
 
@@ -53,7 +53,7 @@ const ContactSection = () => {
   const { lang } = useLanguage();
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-20 bg-surface-soft">
       <Container>
         <div className="flex flex-col gap-12">
           {/* CTA Card */}
@@ -76,7 +76,7 @@ const ContactSection = () => {
                     rel={opensNewTab ? "noopener noreferrer" : undefined}
                     className={`
                   group flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200
-                  hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+                  hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
                   hover:-translate-y-1.5 transition-all duration-300 ease-out
                   no-underline ${item.link ? "cursor-pointer" : "cursor-default"}
                 `}
@@ -88,13 +88,13 @@ const ContactSection = () => {
 
                     {/* Text Content */}
                     <div className="flex flex-col">
-                      <span className="text-xs font-bold text-[#333] uppercase tracking-wide mb-1.5">
+                      <span className="text-xs font-bold text-ink uppercase tracking-wide mb-1.5">
                         {item.title[lang]}
                       </span>
-                      <h4 className="font-body text-base font-medium text-[#333] mb-1">
+                      <h4 className="font-body text-base font-medium text-ink mb-1">
                         {item.value[lang]}
                       </h4>
-                      <p className="text-sm text-[#6c757d] font-body">
+                      <p className="text-sm text-muted font-body leading-relaxed">
                         {item.description[lang]}
                       </p>
                     </div>

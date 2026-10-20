@@ -119,39 +119,42 @@ Everything else, including the `/projects/[slug]` page, is a plain server compon
 
 ## Fonts
 
-Loaded in `src/app/layout.js` via `next/font/google`, exposed as CSS variables on `<body>`:
-- `Inter` → `--font-inter` → mapped to `--font-body` → Tailwind utility `font-body` (default body/paragraph text)
-- `Poppins` → `--font-poppins` → mapped to `--font-title` → Tailwind utility `font-title` (headings, logo, emphasis, and — a bit inconsistently in places like `Hero`'s description — some body copy too)
+Loaded in `src/app/layout.js` via `next/font/google`: **Plus Jakarta Sans** (400-800) -> `--font-jakarta`. In `globals.css` (`@theme inline`) both `--font-body` and `--font-title` map to it, so the `font-body` / `font-title` utilities still work everywhere: one typeface site-wide. Don't reach for raw `font-[...]`.
 
-The mapping happens in `globals.css` under `@theme inline`. To use a font, apply `font-body` or `font-title` — don't reach for raw `font-[Poppins]` etc.
+## Color system (design tokens)
 
-## Color system
+All colors are tokens defined once in `src/app/globals.css`: raw values on `:root`, exposed to Tailwind via `@theme inline` as `--color-*`. **To change the brand palette, edit the `:root` values only.** Never hardcode hex or `blue-*` in components.
 
-No Tailwind color tokens are defined (the `colors` block in `tailwind.config.js` is commented out) — colors are hardcoded inline as arbitrary values throughout components. There are two blues in the system, each reserved for a different weight of UI, and they should not be swapped:
+| Token (class suffix) | Use |
+|---|---|
+| `primary` / `primary-hover` | Solid CTAs, links, accent text, icon color, card-hover glow (`hover:border-primary/50 hover:shadow-primary/10`) |
+| `primary-light` | Accent on top of `surface-dark` (step numbers, focus rings on dark) |
+| `tint` / `tint-strong` | Low-weight fills: icon chips, badges, pills, tag chips |
+| `ink` | Headings and body text |
+| `muted` | Secondary/paragraph text |
+| `line` | Borders (slate-200 is also still used for card borders) |
+| `surface` / `surface-soft` / `surface-dark` | Section backgrounds, see rhythm below |
+| `on-dark-muted` | Secondary text on `surface-dark` |
 
-- **Tint blue** — Tailwind's stock `blue-50`/`blue-100`/`blue-500`/`blue-600` (light Tailwind "royal blue" family). Used for anything low-weight/decorative: icon boxes (`bg-blue-50 text-blue-600`), badges (role badge, `AvailabilityBadge`), skill pills, tag chips, section background tints (`bg-blue-600/5`), and the standard card-hover glow (`hover:border-blue-500/50 hover:shadow-blue-500/10`, see below). This is the "soft" blue — small area, colored text/icon/border on a light background.
-- **Solid blue** — the custom hex `#4251EB` (base) with `#3845C8` as its hover/darker shade. Used exclusively for solid-fill elements where blue covers the whole shape with white text on top: primary CTA buttons (Hero, `CtaCard`, `FeaturedProject` Load More, case-study "Visit Live Website"), the `FeaturedProject`/case-study category tag background gradient (initials fallback), and hover-fill states (`BackToTop`'s hover).
-- Rule of thumb: if blue is the *text/icon/border* color on a light background → tint (`blue-600`). If blue *is* the background and something else sits on top of it → solid (`#4251EB` / `#3845C8` hover).
-- Body text: `#333` / `#333333` for headings, `#6c757d` for secondary/paragraph text.
-- Page background: a subtle top-to-bottom gradient (`--background` in `globals.css`, `linear-gradient(to top, #cfd9df, #e2ebf0)`), `background-attachment: fixed`, applied globally on `body` — individual `<main>` wrappers set `bg-white` on top of it per-page.
+Section rhythm on `/`: Hero (surface) -> About (`surface-soft`) -> Skills (surface) -> Projects (surface) -> How I Work (`surface-dark`) -> Testimonials (`surface-soft`) -> Contact (surface, with `CtaCard` as a `surface-dark` block). Section H2s share one scale: `font-title font-bold text-3xl lg:text-4xl tracking-tight`.
 
-There's no dark mode implementation.
+Page background is plain `surface` (white) on `body`. There's no dark mode implementation.
 
 ## Recurring visual pattern (card hover)
 
-Most content cards across sections and the case-study page (`About` services, `TechnicalExpertise` groups, `HowIWork` steps, `FeaturedProject` cards, `Testimonials` cards, `Contact` info cards, case-study Challenge/Solution cards) share the same hover treatment:
+Most content cards share the same hover treatment:
 
 ```
 border-slate-200
-hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10
+hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
 hover:-translate-y-1.5 transition-all duration-300 ease-out
 ```
 
-Keep new cards consistent with this rather than inventing a new hover style.
+Cards on `surface-dark` (How I Work) use the dark variant: `bg-white/5 border-white/10 hover:border-primary-light/50`. Keep new cards consistent with these rather than inventing a new hover style.
 
 ## Images
 
-Static assets (client logos for `Hero`'s marquee, project cover images for `FeaturedProject`/case-study pages) live in `public/` (`public/logo/`, `public/portfolio/`) and are referenced by root-relative path, rendered via `next/image` with `fill`. When a project's `image` is `null`, both the grid card and the case-study cover fall back to the same pattern: a `getInitials(title)` string on a `#4251EB → #3845C8` gradient background (see Color system).
+Static assets (client logos for `Hero`'s marquee, project cover images for `FeaturedProject`/case-study pages) live in `public/` (`public/logo/`, `public/portfolio/`) and are referenced by root-relative path, rendered via `next/image` with `fill`. When a project's `image` is `null`, both the grid card and the case-study cover fall back to the same pattern: a `getInitials(title)` string on a `primary -> primary-hover` gradient background (see Color system).
 
 ## SEO/metadata
 
