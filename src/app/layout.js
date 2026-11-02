@@ -1,4 +1,4 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
@@ -6,6 +6,12 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-jakarta",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
 });
 
 const SITE_URL = "https://portfolio-website-beta-kohl.vercel.app";
@@ -67,7 +73,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className={`${jakarta.variable} antialiased`}>
+      <body className={`${jakarta.variable} ${inter.variable} font-body antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

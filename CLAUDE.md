@@ -156,6 +156,16 @@ Cards on `surface-dark` (How I Work) use the dark variant: `bg-white/5 border-wh
 
 Static assets (client logos for `Hero`'s marquee, project cover images for `FeaturedProject`/case-study pages) live in `public/` (`public/logo/`, `public/portfolio/`) and are referenced by root-relative path, rendered via `next/image` with `fill`. When a project's `image` is `null`, both the grid card and the case-study cover fall back to the same pattern: a `getInitials(title)` string on a `primary -> primary-hover` gradient background (see Color system).
 
+### Project cover format (standar)
+
+Semua `image` di `src/data/projects.js` pakai format cover yang sama (`public/portfolio/cover-<slug>.png`):
+
+- Kanvas **1600×767**, latar `#f1f4f2` (= `surface-soft`).
+- **Frame browser** lebar 1408px, jarak atas 64px, nempel ke bawah: bar 48px (titik merah/kuning/hijau + URL domain di tengah), sudut atas rounded 16px, bayangan tipis.
+- Isi frame = screenshot hero desktop di viewport **1440px** (tanpa kursor, tombol WA melayang, atau popup).
+- **HP** versi mobile (viewport 390px) lebar 230px, bezel hitam rounded, ditaruh kanan-atas di dalam frame (70px dari kanan, 150px dari atas frame). Skip HP kalau situsnya udah nggak live (contoh: Genova).
+- Gambar dirender pakai `object-cover object-top` di kartu & halaman detail, jadi yang kepotong selalu bagian bawah.
+
 ## SEO/metadata
 
 `src/app/layout.js` sets `metadataBase`, Open Graph, Twitter card, `robots`, and icons off a `SITE_URL` constant (currently the Vercel preview domain, `https://portfolio-website-beta-kohl.vercel.app` — update this if a custom domain is ever attached; note the same constant is currently duplicated in `src/app/projects/[slug]/page.js`, `robots.js`, and `sitemap.js` rather than shared from one place). `src/app/robots.js` and `src/app/sitemap.js` are Next.js App Router metadata routes generated from that same URL, and the sitemap includes every project slug. Each `/projects/[slug]` page also generates its own per-project metadata (title, description, canonical, Open Graph) via `generateMetadata`. There's no dedicated 1200×630 OG image yet — Open Graph currently relies on title/description only.

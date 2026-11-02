@@ -26,7 +26,7 @@
 }
 
 @theme inline {
-  --font-body: var(--font-jakarta);
+  --font-body: var(--font-inter);
   --font-title: var(--font-jakarta);
 
   --color-primary: var(--primary);
@@ -51,7 +51,6 @@ body {
   background-color: var(--surface);
   min-height: 100vh;
   color: var(--ink);
-  letter-spacing: 0.01em; /* Jakarta agak rapat di ukuran kecil */
   line-height: inherit;
   margin: 0;
 }

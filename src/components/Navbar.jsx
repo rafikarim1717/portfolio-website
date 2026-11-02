@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, Languages } from "lucide-react";
 import Container from "@/components/Container";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 const navLinks = [
@@ -19,7 +20,16 @@ const navLinks = [
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
   const { lang, toggleLang } = useLanguage();
+
+  // Bayangan tipis baru muncul setelah halaman di-scroll
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Scroll-spy: highlight nav link berdasarkan section yang lagi keliatan di viewport
   useEffect(() => {
@@ -45,8 +55,10 @@ const Navbar = () => {
   }, []);
 
   const navItemClass = (id) =>
-    `px-3 py-2 text-sm font-semibold rounded-lg transition-colors font-title hover:bg-slate-100 ${
-      active === id ? "text-primary bg-tint" : "text-ink"
+    `relative py-2 text-[14.5px] font-medium font-body transition-colors duration-200 ${
+      active === id
+        ? "text-ink after:absolute after:left-1/2 after:-bottom-0.5 after:h-1 after:w-1 after:-translate-x-1/2 after:rounded-full after:bg-primary"
+        : "text-muted hover:text-ink"
     }`;
 
   const mobileNavItemClass = (id) =>
@@ -57,22 +69,36 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav
+      className={`sticky top-0 z-50 w-full backdrop-blur-md transition-all duration-300 ${
+        scrolled
+          ? "bg-white/85 shadow-[0_1px_0_rgba(15,23,42,0.06),0_8px_24px_-12px_rgba(15,23,42,0.12)]"
+          : "bg-surface/70"
+      }`}
+    >
       <Container>
-        <div className="flex items-center justify-between lg:grid lg:grid-cols-[auto_1fr_auto]">
+        <div className="flex items-center justify-between h-14 lg:h-[68px] lg:grid lg:grid-cols-[1fr_auto_1fr]">
           {/* Left: Logo */}
           <div className="flex items-center gap-2.5">
             {/* Link ini supaya kalau logo diklik balik ke home */}
             <Link
               href="/"
-              className="relative font-title font-bold text-lg text-ink transition-transform active:scale-95"
+              className="flex items-center gap-2.5 font-title font-bold text-[17px] tracking-tight text-ink transition-transform active:scale-95"
             >
+              <Image
+                src="/android-icon-96x96.png"
+                alt=""
+                width={30}
+                height={30}
+                className="rounded-full"
+                priority
+              />
               Rafi Karim
             </Link>
           </div>
 
           {/* Center: Desktop Nav */}
-          <div className="hidden lg:flex items-center justify-center gap-1">
+          <div className="hidden lg:flex items-center justify-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.id}
@@ -85,17 +111,28 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Right: Language Toggle + Mobile Toggle */}
-          <div className="flex items-center justify-end gap-1">
+          {/* Right: Language Toggle + CTA + Mobile Toggle */}
+          <div className="flex items-center justify-end gap-3 lg:gap-5">
             <button
               onClick={toggleLang}
-              className="px-3 py-1.5 text-sm font-bold rounded-full transition-colors font-title bg-tint text-primary border border-tint-strong hover:bg-tint-strong cursor-pointer"
+              className="text-[13px] font-medium font-body text-slate-400 hover:text-ink transition-colors cursor-pointer"
               aria-label={
                 lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"
               }
             >
-              {lang === "id" ? "EN" : "ID"}
+              <span className={lang === "id" ? "text-ink font-semibold" : ""}>ID</span>
+              {" / "}
+              <span className={lang === "en" ? "text-ink font-semibold" : ""}>EN</span>
             </button>
+
+            <a
+              href="https://wa.me/6287879206730?text=Halo%20Rafi,%20mau%20konsultasi%20soal%20website."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center h-10 px-[18px] rounded-full bg-primary text-white text-sm font-semibold font-body shadow-[0_6px_16px_-6px_rgba(15,118,110,0.5)] hover:bg-primary-hover active:scale-95 transition-all duration-200"
+            >
+              {lang === "id" ? "Konsultasi Gratis" : "Free Consultation"}
+            </a>
 
             <button
               className="lg:hidden p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-transform active:scale-90"
