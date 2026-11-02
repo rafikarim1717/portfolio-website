@@ -6,15 +6,25 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const HERO_DATA = {
   id: {
-    title: "Website Lo Harus Mencerminkan Bisnis Lo",
+    title: "Website yang bikin pelanggan percaya, lalu beli.",
     description:
-      "Kebanyakan bisnis belum punya kehadiran online, atau punya website yang gak berfungsi—susah dinavigasi, desainnya kurang oke, atau gagal mengonversi pengunjung. Gue bikin website yang beneran nyelesaiin masalah ini: profesional, jelas, dan dirancang buat mendorong pertumbuhan bisnis dan kredibilitas.",
+      "Gue bantu bisnis lokal tampil profesional online, dari website profil, toko online, sampai sistem yang ngikutin cara kerja lo.",
+    stats: [
+      { value: "24+", label: "Proyek" },
+      { value: "5+", label: "Tahun" },
+      { value: "BUMN & Enterprise", label: "Pengalaman" },
+    ],
     ctaDesktop: "Chat via WhatsApp",
   },
   en: {
-    title: "Your Website Should Reflect Your Business",
+    title: "Websites that make customers trust you, then buy.",
     description:
-      "Most businesses either lack an online presence or have a website that doesn't work—difficult to navigate, poor design, or fails to convert visitors. I build websites that actually solve this: professional, clear, and designed to drive business growth and credibility.",
+      "I help local businesses look professional online, from company profiles and online stores to systems built around how you work.",
+    stats: [
+      { value: "24+", label: "Projects" },
+      { value: "5+", label: "Years" },
+      { value: "SOE & Enterprise", label: "Experience" },
+    ],
     ctaDesktop: "Message on WhatsApp",
   },
 };
@@ -49,14 +59,14 @@ const Hero = () => {
       className="min-h-[calc(100dvh-4rem)] flex flex-col justify-center py-20"
     >
       <Container>
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Badge Role */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tint text-primary text-xs md:text-sm font-bold uppercase tracking-widest mb-6 border border-tint-strong">
             {role}
           </div>
 
           {/* Title - Value proposition, not a generic greeting */}
-          <h1 className="font-title font-bold text-3xl md:text-4xl lg:text-6xl text-ink tracking-tight mb-4">
+          <h1 className="font-title font-bold text-3xl md:text-4xl lg:text-6xl text-ink tracking-tight text-balance mb-5">
             {titleWords.slice(0, -3).join(" ")}{" "}
             <span className="text-primary">
               {titleWords.slice(-3).join(" ")}
@@ -64,12 +74,12 @@ const Hero = () => {
           </h1>
 
           {/* Description */}
-          <p className="font-body font-normal text-base lg:text-lg text-muted leading-relaxed max-w-3xl mx-auto mb-8">
+          <p className="font-body font-normal text-base lg:text-lg text-muted leading-relaxed text-balance max-w-xl mx-auto mb-8">
             {t.description}
           </p>
 
           {/* CTA Section - single, primary action */}
-          <div className="flex items-center justify-center mb-14">
+          <div className="flex items-center justify-center mb-10">
             <a
               href={cta.href}
               target="_blank"
@@ -81,6 +91,21 @@ const Hero = () => {
               <span className="hidden sm:inline">{t.ctaDesktop}</span>
             </a>
           </div>
+
+          {/* Stats - bukti singkat */}
+          <dl className="flex items-stretch justify-center divide-x divide-line">
+            {t.stats.map((stat) => (
+              <div key={stat.label} className="px-4 sm:px-8 text-center">
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="font-title font-extrabold text-lg sm:text-2xl text-ink tracking-tight leading-tight">
+                  {stat.value}
+                </dd>
+                <dd className="font-body text-xs sm:text-sm text-muted mt-0.5">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </Container>
     </section>

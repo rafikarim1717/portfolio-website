@@ -57,7 +57,7 @@ const Navbar = () => {
   const navItemClass = (id) =>
     `relative py-2 text-[14.5px] font-medium font-body transition-colors duration-200 ${
       active === id
-        ? "text-ink after:absolute after:left-1/2 after:-bottom-0.5 after:h-1 after:w-1 after:-translate-x-1/2 after:rounded-full after:bg-primary"
+        ? "text-primary font-semibold after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-primary"
         : "text-muted hover:text-ink"
     }`;
 
