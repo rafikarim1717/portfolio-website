@@ -5,6 +5,7 @@ import { Menu, X, Languages } from "lucide-react";
 import Container from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 
 const navLinks = [
@@ -19,7 +20,10 @@ const navLinks = [
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [active, setActive] = useState("home");
+  const pathname = usePathname();
+  const [spyActive, setActive] = useState("home");
+  // Di halaman detail proyek, yang aktif selalu "Proyek"
+  const active = pathname?.startsWith("/projects") ? "projects" : spyActive;
   const [scrolled, setScrolled] = useState(false);
   const { lang, toggleLang } = useLanguage();
 
