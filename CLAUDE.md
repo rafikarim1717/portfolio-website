@@ -95,7 +95,9 @@ Single source of truth for both the `FeaturedProject` grid on `/` and each `/pro
   id, slug, title, description, image,   // image: null → gradient-initials fallback (see Images below)
   category, tags, link,                  // used on the card grid
   industry, location, techStack,         // used on the case-study meta row
-  challenge, solution,                   // used on the case-study "Challenge/Solution" cards
+  caseStudy: {                           // case-study page: Masalahnya / Yang gue kerjain
+    problemTitle, problem, solutionTitle, points: { id: [], en: [] }
+  },
   testimonial: { quote, name, role },    // optional — presence drives the Testimonials section
   status: "inactive",                    // optional — swaps the case-study CTA for a disabled "Site No Longer Live" state
 }

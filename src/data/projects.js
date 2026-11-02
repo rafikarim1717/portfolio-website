@@ -17,13 +17,33 @@ export const projects = [
     },
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "Headless CMS"],
-    challenge: {
-      id: "Seven Retail adalah house of brands yang menjalankan beberapa lini bisnis di berbagai industri — dari label F&B seperti Golden Lamian sampai klinik estetika seperti Sozo Skin — dan butuh revamp total buat menyesuaikan identitas brand barunya. Konten website lama itu hardcoded, jadi dari update perusahaan sampai lowongan kerja di halaman karier harus lewat developer, memperlambat mereka setiap kali ada yang perlu diubah.",
-      en: "Seven Retail is a house of brands running multiple business lines across different industries — from F&B labels like Golden Lamian to aesthetic clinics like Sozo Skin — and needed a full revamp to match their new brand identity. The old site's content was hardcoded, so anything from company updates to open positions on the career page had to go through a developer, slowing them down whenever something needed changing.",
-    },
-    solution: {
-      id: "Kami membangun ulang website di atas headless CMS supaya tim Seven Retail bisa update konten sendiri — dari info umum perusahaan sampai listing di halaman karier — tanpa menyentuh kode. Desainnya dijaga tetap bersih dan simpel, terstruktur dalam empat bagian jelas: Home, About, Career, dan Contact, semuanya disesuaikan dengan identitas brand mereka yang sudah diperbarui.",
-      en: "We rebuilt the site on a headless CMS so Seven Retail's team can update content themselves — from general company info to career page listings — without touching code. The design was kept clean and simple, structured around four clear sections: Home, About, Career, and Contact, all styled to match their refreshed brand identity.",
+    caseStudy: {
+      "problemTitle": {
+        "id": "Tiap ganti konten harus nunggu developer.",
+        "en": "Every content change had to wait for a developer."
+      },
+      "problem": {
+        "id": "Seven Retail punya banyak brand (dari F&B sampai klinik estetika) dan lagi ganti identitas. Konten web lamanya hardcoded, jadi update info perusahaan sampai lowongan kerja selalu lewat developer.",
+        "en": "Seven Retail runs many brands, from F&B to aesthetic clinics, and was refreshing its identity. The old site was hardcoded, so even company updates and job listings had to go through a developer."
+      },
+      "solutionTitle": {
+        "id": "Website baru yang bisa diurus tim mereka sendiri.",
+        "en": "A new site their own team can manage."
+      },
+      "points": {
+        "id": [
+          "Dibangun ulang pakai headless CMS",
+          "Tim bisa update konten & lowongan kerja tanpa coding",
+          "Struktur simpel: Home, About, Career, Contact",
+          "Desain ngikutin identitas brand yang baru"
+        ],
+        "en": [
+          "Rebuilt on a headless CMS",
+          "Team updates content & job listings without code",
+          "Simple structure: Home, About, Career, Contact",
+          "Design follows the refreshed brand identity"
+        ]
+      }
     },
     testimonial: {
       quote: {
@@ -54,13 +74,33 @@ export const projects = [
     },
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "WhatsApp Integration"],
-    challenge: {
-      id: "Ikonoa belum punya website company profile, jadi calon klien gak punya cara yang jelas buat memahami apa yang sebenarnya dikerjakan bisnis ini — pengalamannya sebagai pialang asuransi, apa saja yang dicakup konsultasi risiko, atau bagaimana proses klaimnya berjalan. Tanpa konteks itu, sulit membangun kepercayaan dengan leads yang lagi riset brand ini untuk pertama kalinya.",
-      en: "Ikonoa didn't have a company profile website, so prospective clients had no clear way to understand what the business actually does — its experience as an insurance brokerage, what risk consulting covers, or how the claims process works. Without that context, it was hard to build trust with leads researching the brand for the first time.",
-    },
-    solution: {
-      id: "Kami membangun company profile yang secara jelas menjabarkan fokus industri dan rekam jejak Ikonoa, memecah layanan seperti konsultasi risiko jadi apa saja yang dicakup dan bagaimana prosesnya berjalan langkah demi langkah. Integrasi WhatsApp ditambahkan di atasnya, supaya pengunjung bisa langsung menghubungi begitu ada pertanyaan.",
-      en: "We built a company profile that clearly lays out Ikonoa's industry focus and track record, breaking down services like risk consulting into what's covered and how the process runs step by step. A WhatsApp integration was added on top, so visitors can reach out directly the moment they have a question.",
+    caseStudy: {
+      "problemTitle": {
+        "id": "Calon klien nggak tau Ikonoa ngapain.",
+        "en": "Prospects couldn't tell what Ikonoa does."
+      },
+      "problem": {
+        "id": "Ikonoa belum punya website. Calon klien yang lagi riset nggak bisa lihat pengalaman mereka sebagai pialang asuransi, apa aja layanannya, atau gimana proses klaimnya.",
+        "en": "Ikonoa had no website. Prospects researching them couldn't see their brokerage experience, what services they offer, or how claims work."
+      },
+      "solutionTitle": {
+        "id": "Company profile yang jelasin semuanya.",
+        "en": "A company profile that explains it all."
+      },
+      "points": {
+        "id": [
+          "Fokus industri & rekam jejak ditampilin di depan",
+          "Tiap layanan dijelasin: cakupan & alur prosesnya",
+          "Alur klaim step by step",
+          "Tombol WhatsApp buat langsung nanya"
+        ],
+        "en": [
+          "Industry focus & track record up front",
+          "Each service explained: scope & process",
+          "Step-by-step claims flow",
+          "WhatsApp button for quick questions"
+        ]
+      }
     },
     testimonial: {
       quote: {
@@ -88,13 +128,33 @@ export const projects = [
     industry: { id: "Hospitality & Properti", en: "Hospitality & Property" },
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "WhatsApp Integration"],
-    challenge: {
-      id: "Masalah terbesar Wisma 52 adalah komunikasi — calon penyewa terus-menerus menanyakan pertanyaan yang sama: harga kamar, tipe kamar, seperti apa sebenarnya kamarnya, peraturan rumah, dan seterusnya. Tanpa channel informasi yang proper, semua itu harus dijelaskan manual, satu obrolan di satu waktu, sebelum siapa pun bisa memutuskan buat booking.",
-      en: "Wisma 52's biggest issue was communication — prospective tenants kept asking the same questions over and over: room rates, room types, what the rooms actually looked like, house rules, and so on. Without a proper information channel, all of that had to be explained manually, one conversation at a time, before anyone could even decide whether to book.",
-    },
-    solution: {
-      id: "Kami membangun website yang menjabarkan semuanya di depan — tipe kamar, harga, lokasi dengan titik-titik menarik di sekitarnya, dan foto kamar asli — supaya siapa pun yang mendarat dari pencarian Google, atau direferensikan lewat channel lain, sudah punya gambaran lengkap sebelum menghubungi. WhatsApp diintegrasikan langsung di website, jadi begitu obrolan dimulai, itu bukan lagi sesi tanya-jawab info tapi jalan lurus menuju booking.",
-      en: "We built a website that lays out everything upfront — room types, pricing, location with nearby points of interest, and real room photos — so anyone landing on it from a Google search, or referred in through another channel, already has the full picture before reaching out. WhatsApp is integrated directly on the site, so by the time a conversation starts, it's no longer an info-gathering chat but a straight path to booking.",
+    caseStudy: {
+      "problemTitle": {
+        "id": "Calon penyewa nanya hal yang sama terus.",
+        "en": "Prospective tenants kept asking the same things."
+      },
+      "problem": {
+        "id": "Harga, tipe kamar, foto, aturan kos. Semua dijawab manual satu per satu lewat chat, sebelum ada yang jadi booking.",
+        "en": "Prices, room types, photos, house rules. All answered manually, one chat at a time, before anyone booked."
+      },
+      "solutionTitle": {
+        "id": "Semua info penting di satu halaman.",
+        "en": "Everything important on one page."
+      },
+      "points": {
+        "id": [
+          "Tipe kamar & harga ditampilin jelas di depan",
+          "Foto kamar asli, bukan foto stok",
+          "Lokasi + tempat penting di sekitar",
+          "Tombol WhatsApp langsung buat booking"
+        ],
+        "en": [
+          "Room types & prices shown up front",
+          "Real room photos, not stock",
+          "Location + nearby landmarks",
+          "WhatsApp button straight to booking"
+        ]
+      }
     },
     testimonial: {
       quote: {
@@ -123,13 +183,33 @@ export const projects = [
     location: "Jakarta, Indonesia",
     techStack: ["Next.js", "Tailwind CSS", "Tokopedia API", "WhatsApp Integration"],
     status: "inactive",
-    challenge: {
-      id: "Genova memproduksi dan menjual produk sirupnya secara eksklusif lewat Tokopedia, tapi belum punya ruang khusus buat menampilkan katalog produk lengkapnya atau lokasi cabang fisiknya — listing di marketplace saja gak dibuat buat jenis browsing atau presentasi brand seperti itu.",
-      en: "Genova produces and sells its syrup products exclusively through Tokopedia, but had no dedicated space to properly showcase its full product catalog or where its physical branches are located — a marketplace listing alone isn't built for that kind of browsing or brand presentation.",
-    },
-    solution: {
-      id: "Kami membangun website berfokus katalog yang menampilkan seluruh jajaran produk dan lokasi cabang Genova, dengan tiap produk yang terhubung langsung ke listing Tokopedia-nya sehingga checkout tetap di tempat yang sudah berjalan baik. Integrasi WhatsApp ditambahkan di atasnya buat pertanyaan langsung.",
-      en: "We built a catalog-focused website that showcases Genova's full product range and branch locations, with each product linking straight to its Tokopedia listing so checkout stays exactly where it already worked. A WhatsApp integration was added on top for direct inquiries.",
+    caseStudy: {
+      "problemTitle": {
+        "id": "Jualan cuma di Tokopedia, brand-nya nggak kelihatan.",
+        "en": "Selling only on Tokopedia, the brand got lost."
+      },
+      "problem": {
+        "id": "Genova jualan sirup lewat Tokopedia, tapi belum punya tempat buat nampilin katalog lengkap dan lokasi cabangnya. Listing marketplace nggak dibikin buat itu.",
+        "en": "Genova sold its syrups on Tokopedia but had nowhere to show the full catalog and its branch locations. Marketplace listings aren't built for that."
+      },
+      "solutionTitle": {
+        "id": "Katalog brand yang tetap jualan lewat Tokopedia.",
+        "en": "A brand catalog that still sells through Tokopedia."
+      },
+      "points": {
+        "id": [
+          "Semua produk ditampilin dalam satu katalog",
+          "Tiap produk nyambung langsung ke Tokopedia",
+          "Daftar lokasi cabang",
+          "Tombol WhatsApp buat pertanyaan"
+        ],
+        "en": [
+          "Every product in one catalog",
+          "Each product links straight to Tokopedia",
+          "Branch locations listed",
+          "WhatsApp button for questions"
+        ]
+      }
     },
     testimonial: {
       quote: {
@@ -157,13 +237,33 @@ export const projects = [
     industry: { id: "Asuransi", en: "Insurance" },
     location: "Jakarta, Indonesia",
     techStack: ["HTML", "Tailwind CSS", "Google Business Profile"],
-    challenge: {
-      id: "PT Multi Sarana Pelindung adalah perusahaan asuransi yang belum pernah punya website, yang bikin susah membangun kredibilitas dengan calon klien — gak ada tempat buat menunjukkan visi dan misi mereka, lini bisnis apa saja yang dicakup, atau siapa saja partner mereka.",
-      en: "PT Multi Sarana Pelindung is an insurance company that never had a website, which made it hard to establish credibility with prospective clients — there was no place to show their vision and mission, what business lines they cover, or who their partners are.",
-    },
-    solution: {
-      id: "Kami membangun company profile yang jelas: homepage yang mencakup visi, misi, lini bisnis, dan partner mereka; halaman General Insurance khusus yang menjelaskan apa saja yang dicakup dan bagaimana prosesnya; galeri; halaman lokasi dengan alamat dan jam kunjungan; serta halaman contact dengan form email buat pertanyaan. Kami juga men-setup Google Business Profile mereka bersamaan dengan website, jadi perusahaan ini muncul dengan benar saat orang mencari mereka langsung.",
-      en: "We built a clear company profile: a homepage covering their vision, mission, business lines, and partners; a dedicated General Insurance page explaining what's covered and how the process works; a gallery; a location page with address and visiting hours; and a contact page with an email form for inquiries. We also set up their Google Business Profile alongside the website, so the company shows up properly when people search for them directly.",
+    caseStudy: {
+      "problemTitle": {
+        "id": "Nggak ada website, susah dipercaya.",
+        "en": "No website made trust hard to earn."
+      },
+      "problem": {
+        "id": "MSP belum pernah punya website. Nggak ada tempat buat nunjukin visi misi, lini bisnis, dan partner mereka ke calon klien.",
+        "en": "MSP had never had a website, with nowhere to show prospects their vision, business lines, and partners."
+      },
+      "solutionTitle": {
+        "id": "Company profile lengkap + muncul di Google.",
+        "en": "A complete company profile, now on Google."
+      },
+      "points": {
+        "id": [
+          "Visi misi, lini bisnis & partner di beranda",
+          "Halaman khusus produk asuransi & prosesnya",
+          "Galeri, lokasi kantor & jam kunjungan",
+          "Setup Google Business Profile"
+        ],
+        "en": [
+          "Vision, business lines & partners on the homepage",
+          "Dedicated insurance product page & process",
+          "Gallery, office location & visiting hours",
+          "Google Business Profile setup"
+        ]
+      }
     },
     testimonial: {
       quote: {
@@ -194,13 +294,33 @@ export const projects = [
     },
     location: "Jakarta, Indonesia",
     techStack: ["React", "Static HTML"],
-    challenge: {
-      id: "Ini adalah proyek dummy yang dibangun buat mendemonstrasikan bagaimana gue mendekati skenario umum: klinik estetika yang baru buka dengan online presence nol, yang perlu mendapat kepercayaan dari orang asing sebelum mereka mau booking treatment yang belum pernah mereka coba. Klinik baru menghadapi masalah spesifik — pengunjung gak cuma mau lihat daftar layanan, mereka butuh tiap treatment dijelaskan dengan jelas (apa itu, bagaimana cara kerjanya, buat siapa) sebelum mereka merasa nyaman buat booking.",
-      en: "This is a dummy project built to demonstrate how I approach a common scenario: a newly-opened aesthetic clinic with zero online presence, needing to earn trust from complete strangers before they'll book a treatment they've never tried. New clinics face a specific problem — visitors don't just want a list of services, they need each treatment explained clearly (what it is, how it works, who it's for) before they'll feel comfortable booking.",
-    },
-    solution: {
-      id: "Kami merancang website multi-halaman lengkap di sekitar kebutuhan membangun kepercayaan itu: homepage dan halaman About yang mengenalkan cerita klinik, visi, dan para dokter; hub Treatments khusus yang menghubungkan ke enam halaman treatment individual, masing-masing mengikuti struktur yang sama — manfaat, proses langkah demi langkah, siapa yang cocok, dan mini-FAQ — supaya pengunjung dapat jawaban nyata tanpa perlu bertanya; ditambah halaman FAQ umum dan halaman Contact dengan CTA WhatsApp buat booking instan. Seluruh website itu statis, HTML self-contained dengan React yang di-bundle inline, jadi jalan tanpa server atau build setup sama sekali.",
-      en: "We designed a full multi-page site around that trust-building need: a homepage and About page introducing the clinic's story, vision, and doctors; a dedicated Treatments hub linking out to six individual treatment pages, each following the same structure — benefits, step-by-step process, who it's suitable for, and a mini-FAQ — so visitors get real answers without having to ask; plus a general FAQ page and a Contact page with a WhatsApp CTA for instant booking. The whole site is static, self-contained HTML with React bundled inline, so it runs with zero server or build setup.",
+    caseStudy: {
+      "problemTitle": {
+        "id": "Klinik baru harus dipercaya orang asing.",
+        "en": "A new clinic needs strangers to trust it."
+      },
+      "problem": {
+        "id": "Ini proyek konsep. Klinik estetika yang baru buka belum punya reputasi, dan calon pasien butuh tiap treatment dijelasin dulu sebelum berani booking.",
+        "en": "This is a concept project. A newly opened aesthetic clinic has no reputation yet, and patients need each treatment explained before they'll book."
+      },
+      "solutionTitle": {
+        "id": "Website yang jawab pertanyaan pasien duluan.",
+        "en": "A site that answers patients' questions first."
+      },
+      "points": {
+        "id": [
+          "Cerita klinik, visi & profil dokter",
+          "6 halaman treatment: manfaat, proses, cocok buat siapa, FAQ",
+          "Halaman FAQ umum",
+          "Booking langsung lewat WhatsApp"
+        ],
+        "en": [
+          "Clinic story, vision & doctor profiles",
+          "6 treatment pages: benefits, process, who it's for, FAQ",
+          "General FAQ page",
+          "Booking straight through WhatsApp"
+        ]
+      }
     },
   },
 ];
