@@ -88,16 +88,16 @@ const FeaturedProjects = () => {
               </div>
 
               {/* Content Body */}
-              <div className="p-5 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col flex-grow">
                 <Link href={`/projects/${project.slug}`}>
-                  <h3 className="font-bold font-title text-ink text-sm mb-2.5 group-hover:text-primary transition-colors">
+                  <h3 className="font-semibold font-title text-ink text-lg leading-snug mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                 </Link>
-                <p className="text-[15px] font-body mb-6 text-muted line-clamp-3 leading-relaxed">
+                <p className="text-[15px] font-body leading-[1.5] tracking-normal text-muted line-clamp-3 mb-6">
                   {project.description[lang]}
                 </p>
-                <div className="mt-auto flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
@@ -109,7 +109,7 @@ const FeaturedProjects = () => {
                 </div>
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold font-title text-primary hover:gap-2.5 transition-all"
+                  className="mt-auto pt-5 border-t border-slate-100 inline-flex items-center gap-1.5 text-sm font-semibold font-title text-primary hover:gap-2.5 transition-all"
                 >
                   {t.viewCaseStudy}
                   <ArrowRight className="w-3.5 h-3.5" />
