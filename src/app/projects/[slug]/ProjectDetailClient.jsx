@@ -157,31 +157,30 @@ const ProjectDetailClient = ({ project }) => {
 
           {/* Problem & Solution */}
           {cs && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 mb-12 lg:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-10 lg:gap-16 mb-12">
               <section>
                 <p className={eyebrow}>{t.problem}</p>
-                <h2 className="font-title font-bold text-2xl lg:text-[26px] text-ink tracking-tight leading-snug mb-3 text-balance">
+                <h2 className="font-title font-bold text-xl lg:text-[22px] text-ink tracking-tight leading-tight mb-3 text-balance max-w-md">
                   {cs.problemTitle[lang]}
                 </h2>
-                <p className="font-body text-base lg:text-[17px] text-muted leading-relaxed">
+                <p className="font-body text-base text-muted leading-relaxed max-w-md">
                   {cs.problem[lang]}
                 </p>
               </section>
               <section>
                 <p className={eyebrow}>{t.solution}</p>
-                <h2 className="font-title font-bold text-2xl lg:text-[26px] text-ink tracking-tight leading-snug mb-4 text-balance">
+                <h2 className="font-title font-bold text-xl lg:text-[22px] text-ink tracking-tight leading-tight mb-3 text-balance max-w-md">
                   {cs.solutionTitle[lang]}
                 </h2>
                 <ul className="flex flex-col gap-3">
                   {cs.points[lang].map((point) => (
                     <li
                       key={point}
-                      className="flex gap-3 font-body text-base text-ink/80 leading-normal"
+                      className="flex items-start gap-3 font-body text-[15px] text-ink/85 leading-[1.45]"
                     >
-                      <Check
-                        className="w-[18px] h-[18px] text-primary shrink-0 mt-0.5"
-                        strokeWidth={2.5}
-                      />
+                      <span className="mt-px flex w-5 h-5 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+                        <Check className="w-3 h-3" strokeWidth={3.5} />
+                      </span>
                       <span>{point}</span>
                     </li>
                   ))}
@@ -192,10 +191,16 @@ const ProjectDetailClient = ({ project }) => {
 
           {/* Testimonial */}
           {project.testimonial && (
-            <figure className="rounded-2xl bg-surface-soft px-6 py-8 sm:px-10 sm:py-10 lg:px-12 mb-12 lg:mb-16">
+            <figure className="relative rounded-2xl bg-surface-soft px-6 pt-14 pb-8 sm:pl-24 sm:pr-12 sm:pt-9 sm:pb-9 mb-12 lg:mb-16">
+              <span
+                aria-hidden="true"
+                className="absolute left-6 top-4 sm:left-10 sm:top-6 font-title font-bold text-6xl sm:text-7xl leading-none text-primary"
+              >
+                &ldquo;
+              </span>
               <p className={eyebrow}>{t.clientSays}</p>
-              <blockquote className="font-title font-medium text-xl lg:text-[22px] text-ink leading-normal tracking-tight mb-5 text-balance">
-                &ldquo;{project.testimonial.quote[lang]}&rdquo;
+              <blockquote className="font-title font-medium text-lg lg:text-[19px] text-ink leading-[1.45] tracking-tight mb-3.5 max-w-[680px] text-pretty">
+                {project.testimonial.quote[lang]}
               </blockquote>
               <figcaption>
                 <span className="block font-body font-semibold text-[15px] text-ink">
