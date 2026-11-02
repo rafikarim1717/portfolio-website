@@ -121,7 +121,7 @@ const Navbar = () => {
               }
             >
               <span className={lang === "id" ? "text-ink font-semibold" : ""}>ID</span>
-              {" / "}
+              <span aria-hidden="true" className="px-1">/</span>
               <span className={lang === "en" ? "text-ink font-semibold" : ""}>EN</span>
             </button>
 

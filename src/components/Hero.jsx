@@ -56,17 +56,17 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-[calc(100dvh-4rem)] flex flex-col justify-center py-20"
+      className="min-h-[calc(100svh-3.5rem)] lg:min-h-[calc(100svh-68px)] flex flex-col justify-center pt-8 pb-16 lg:pt-6 lg:pb-14"
     >
       <Container>
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge Role */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tint text-primary text-xs md:text-sm font-bold uppercase tracking-widest mb-6 border border-tint-strong">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tint text-primary text-xs md:text-[13px] font-bold uppercase tracking-widest mb-5 lg:mb-6 border border-tint-strong">
             {role}
           </div>
 
           {/* Title - Value proposition, not a generic greeting */}
-          <h1 className="font-title font-bold text-3xl md:text-4xl lg:text-6xl text-ink tracking-tight text-balance mb-5">
+          <h1 className="font-title font-bold text-[34px] leading-[1.1] md:text-5xl lg:text-[56px] lg:leading-[1.05] text-ink tracking-tight text-balance mb-4 lg:mb-5">
             {titleWords.slice(0, -3).join(" ")}{" "}
             <span className="text-primary">
               {titleWords.slice(-3).join(" ")}
@@ -74,12 +74,12 @@ const Hero = () => {
           </h1>
 
           {/* Description */}
-          <p className="font-body font-normal text-base lg:text-lg text-muted leading-relaxed text-balance max-w-xl mx-auto mb-8">
+          <p className="font-body font-normal text-base lg:text-lg text-muted leading-relaxed text-balance max-w-xl mx-auto mb-7 lg:mb-8">
             {t.description}
           </p>
 
           {/* CTA Section - single, primary action */}
-          <div className="flex items-center justify-center mb-10">
+          <div className="flex items-center justify-center mb-8 lg:mb-10">
             <a
               href={cta.href}
               target="_blank"
