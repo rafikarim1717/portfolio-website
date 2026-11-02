@@ -19,7 +19,7 @@ const SECTION_TEXT = {
   en: {
     heading: "Featured Projects",
     subheading:
-      "A selection of real client work — from e-commerce platforms to business profiles — each one built to solve a specific problem, not just look good.",
+      "Real client work, from company profiles to online stores. Each one built to solve a specific problem, not just look good.",
     loadMore: "Load More",
     viewCaseStudy: "View Case Study",
   },

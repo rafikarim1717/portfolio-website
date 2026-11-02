@@ -24,23 +24,23 @@ const services = [
     title: { id: "Website Bisnis", en: "Business Website" },
     description: {
       id: "Company profile atau landing page yang bikin bisnis lo kelihatan kredibel dan gampang dihubungi.",
-      en: "Establish credibility and generate leads with a professional company profile or high-converting landing page. Clear, fast-loading, optimized for your audience.",
+      en: "A company profile or landing page that makes your business look credible and easy to reach.",
     },
     icon: LayoutTemplate,
   },
   {
-    title: { id: "Toko Online", en: "E-Commerce Store" },
+    title: { id: "Toko Online", en: "Online Store" },
     description: {
       id: "Keranjang, pembayaran, stok, sampai data pelanggan. Pembeli bisa checkout sendiri tanpa harus DM.",
-      en: "Turn browsers into buyers with a complete online store—shopping cart, secure payments, inventory tracking, and customer management built in.",
+      en: "Cart, payments, stock, and customer data. Buyers check out on their own, no DMs needed.",
     },
     icon: ShoppingCart,
   },
   {
-    title: { id: "Sistem Custom", en: "Custom Web Systems" },
+    title: { id: "Sistem Custom", en: "Custom System" },
     description: {
       id: "Sistem yang ngikutin cara bisnis lo jalan. Contoh: booking & riwayat treatment pasien buat klinik.",
-      en: "Software built around how your business runs. Example: a booking & patient treatment-history system for a clinic.",
+      en: "A system built around how your business runs. Example: booking & treatment history for a clinic.",
     },
     icon: Settings,
   },

@@ -13,9 +13,9 @@ const TEXT = {
     cta: "Mulai Proyek Lo",
   },
   en: {
-    title: "Ready for Your Custom Solution?",
+    title: "Ready to Build a Solution for Your Business?",
     description:
-      "Transform your business with high-performance systems and modern architecture. Let's build something exceptional together.",
+      "Make your business run smoother with a fast, modern system. Let's build it together.",
     cta: "Start Your Project",
   },
 };

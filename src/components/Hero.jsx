@@ -7,6 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 const HERO_DATA = {
   id: {
     title: "Website yang bikin pelanggan percaya, lalu beli.",
+    highlight: 3, // jumlah kata terakhir yang diwarnai
     description:
       "Gue bantu bisnis lokal tampil profesional online, dari website profil, toko online, sampai sistem yang ngikutin cara kerja lo.",
     stats: [
@@ -18,6 +19,7 @@ const HERO_DATA = {
   },
   en: {
     title: "Websites that make customers trust you, then buy.",
+    highlight: 4,
     description:
       "I help local businesses look professional online, from company profiles and online stores to systems built around how you work.",
     stats: [
@@ -52,6 +54,7 @@ const Hero = () => {
   const { lang } = useLanguage();
   const t = HERO_DATA[lang];
   const titleWords = t.title.split(" ");
+  const hl = t.highlight ?? 3;
 
   return (
     <section
@@ -67,9 +70,9 @@ const Hero = () => {
 
           {/* Title - Value proposition, not a generic greeting */}
           <h1 className="font-title font-bold text-[34px] leading-[1.1] md:text-5xl lg:text-[56px] lg:leading-[1.05] text-ink tracking-tight text-balance mb-4 lg:mb-5">
-            {titleWords.slice(0, -3).join(" ")}{" "}
+            {titleWords.slice(0, -hl).join(" ")}{" "}
             <span className="text-primary">
-              {titleWords.slice(-3).join(" ")}
+              {titleWords.slice(-hl).join(" ")}
             </span>
           </h1>
 
