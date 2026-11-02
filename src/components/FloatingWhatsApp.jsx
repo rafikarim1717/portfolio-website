@@ -7,6 +7,8 @@ const FloatingWhatsApp = () => {
   return (
     <a
       href={WHATSAPP_HREF}
+      data-umami-event="wa-click"
+      data-umami-event-source="floating"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat via WhatsApp"

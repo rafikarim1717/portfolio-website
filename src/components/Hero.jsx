@@ -85,6 +85,8 @@ const Hero = () => {
           <div className="flex items-center justify-center mb-8 lg:mb-10">
             <a
               href={cta.href}
+              data-umami-event="wa-click"
+              data-umami-event-source="hero"
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 font-body cursor-pointer font-medium inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 sm:px-9 text-sm shadow-md shadow-primary/20 transition-all duration-300 hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95 whitespace-nowrap"

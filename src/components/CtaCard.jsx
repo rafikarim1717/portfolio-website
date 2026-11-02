@@ -41,6 +41,8 @@ const CtaCard = () => {
 
         <a
           href={WHATSAPP_HREF}
+          data-umami-event="wa-click"
+          data-umami-event-source="cta"
           target="_blank"
           rel="noopener noreferrer"
           className="

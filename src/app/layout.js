@@ -1,5 +1,6 @@
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
+import Script from "next/script";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -75,6 +76,11 @@ export default function RootLayout({ children }) {
     <html lang="id" data-scroll-behavior="smooth">
       <body className={`${jakarta.variable} ${inter.variable} font-body antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="07630a4d-d4ff-473b-80b4-70be4bee55ba"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

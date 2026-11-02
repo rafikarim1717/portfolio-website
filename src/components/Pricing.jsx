@@ -244,6 +244,8 @@ const Pricing = () => {
 
                 <a
                   href={waHref(pkg.waText)}
+                  data-umami-event="wa-click"
+                  data-umami-event-source={`pricing-${pkg.key}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`

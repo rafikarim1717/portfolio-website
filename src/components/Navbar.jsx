@@ -131,6 +131,8 @@ const Navbar = () => {
 
             <a
               href="https://wa.me/6287879206730?text=Halo%20Rafi,%20mau%20konsultasi%20soal%20website."
+              data-umami-event="wa-click"
+              data-umami-event-source="navbar"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center h-10 px-[18px] rounded-full bg-primary text-white text-sm font-semibold font-body shadow-[0_6px_16px_-6px_rgba(15,118,110,0.5)] hover:bg-primary-hover active:scale-95 transition-all duration-200"

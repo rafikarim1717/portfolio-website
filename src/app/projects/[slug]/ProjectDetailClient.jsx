@@ -229,6 +229,8 @@ const ProjectDetailClient = ({ project }) => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5">
                 <a
                   href={waHref}
+                  data-umami-event="wa-click"
+                  data-umami-event-source={`case-study-${project.slug}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center h-12 px-7 rounded-full bg-white text-surface-dark font-body font-semibold text-[15px] shadow-[0_10px_30px_-10px_rgba(94,234,212,0.55)] hover:bg-tint active:scale-95 transition-all duration-300"
