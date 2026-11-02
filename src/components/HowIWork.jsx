@@ -7,46 +7,46 @@ const SECTION_TEXT = {
   id: {
     heading: "Cara Gue Kerja",
     subheading:
-      "Proses yang jelas dan dibangun di atas komunikasi terbuka dan progres yang stabil — dari obrolan pertama sampai support setelah launching.",
+      "Dari ngobrol pertama sampai website online, lo tau progresnya di tiap tahap.",
   },
   en: {
     heading: "How I Work",
     subheading:
-      "A straightforward process built around clear communication and steady progress — from first conversation to post-launch support.",
+      "From our first chat to your site going live, you know where things stand at every step.",
   },
 };
 
 const steps = [
   {
     number: "01",
-    title: { id: "Pahami", en: "Understand" },
+    title: { id: "Ngobrol", en: "Talk" },
     description: {
-      id: "Gue mulai dengan gali tujuan bisnis, alur kerja, dan pain point lo — bukan cuma requirement di atas kertas — biar solusinya beneran cocok sama cara bisnis lo jalan.",
-      en: "I start by digging into your business goals, workflows, and pain points — not just requirements on paper — so the solution actually fits how you operate.",
+      id: "Lo ceritain bisnis lo, gue tanya hal-hal penting biar solusinya pas.",
+      en: "You tell me about your business, I ask the important questions so the solution fits.",
     },
   },
   {
     number: "02",
     title: { id: "Desain", en: "Design" },
     description: {
-      id: "Gue petain arsitektur, alur data, dan UI sebelum menulis satu baris kode pun, direncanakan buat scalability dan kemudahan maintenance sejak hari pertama.",
-      en: "I map out the architecture, data flow, and UI before writing a single line of code, planning for scale and maintainability from day one.",
+      id: "Lo lihat dan setuju sama tampilannya dulu, sebelum mulai dibikin.",
+      en: "You see and approve the design first, before anything gets built.",
     },
   },
   {
     number: "03",
-    title: { id: "Uji & Iterasi", en: "Test & Iterate" },
+    title: { id: "Bikin & Revisi", en: "Build & Revise" },
     description: {
-      id: "Gue bangun feedback loop yang ketat — testing sejak awal, menangkap masalah dengan cepat, dan menyempurnakan berdasarkan penggunaan nyata, bukan asumsi.",
-      en: "I build in tight feedback loops — testing early, catching issues fast, and refining based on real usage instead of assumptions.",
+      id: "Gue kerjain, lo cek progresnya, dan revisi sampai pas.",
+      en: "I build it, you check the progress, and we revise until it fits.",
     },
   },
   {
     number: "04",
-    title: { id: "Rilis & Support", en: "Deliver & Support" },
+    title: { id: "Online & Support", en: "Launch & Support" },
     description: {
-      id: "Gue deliver sistem yang siap produksi dan tetap dampingin setelah launching buat perbaikan, penyesuaian, dan iterasi lanjutan seiring bisnis lo berkembang.",
-      en: "I ship production-ready systems and stay on after launch for fixes, tweaks, and future iterations as your business grows.",
+      id: "Website live, lo diajarin cara pakainya, dan gue tetap bantu kalau ada kendala.",
+      en: "Your site goes live, I show you how to use it, and I stay around if anything comes up.",
     },
   },
 ];
