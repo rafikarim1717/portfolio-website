@@ -3,8 +3,8 @@
 import { useLanguage } from "@/context/LanguageContext";
 
 const TEXT = {
-  id: "Tersedia untuk kerja",
-  en: "Available for hire",
+  id: "Lagi terima proyek baru",
+  en: "Open for new projects",
 };
 
 const AvailabilityBadge = ({ className = "" }) => {

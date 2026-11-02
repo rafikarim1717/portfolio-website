@@ -1,5 +1,5 @@
 const WHATSAPP_HREF =
-  "https://wa.me/6287879206730?text=Hi%20Rafi,%20saya%20tertarik%20dengan%20layanan%20web%20development%20Anda.";
+  "https://wa.me/6287879206730?text=Halo%20Rafi,%20mau%20tanya%20soal%20jasa%20website.";
 
 // Tombol WhatsApp yang selalu nempel di kanan bawah.
 // Back to Top ditaruh di atasnya (lihat BackToTop.jsx).

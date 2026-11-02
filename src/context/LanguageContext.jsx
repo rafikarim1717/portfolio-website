@@ -7,7 +7,7 @@ const LanguageContext = createContext(undefined);
 const STORAGE_KEY = "lang";
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("id");
 
   // Baca preferensi tersimpan setelah mount (biar gak mismatch sama HTML dari server).
   // Sengaja setState di effect: localStorage cuma ada di browser, server selalu render

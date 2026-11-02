@@ -5,6 +5,7 @@ import TechnicalExpertise from "@/components/TechnicalExpertise";
 import HowIWork from "@/components/HowIWork";
 import FeaturedProjects from "@/components/FeaturedProject";
 import Testimonials from "@/components/Testimonials";
+import Pricing from "@/components/Pricing";
 import ContactSection from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
@@ -16,10 +17,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <TechnicalExpertise />
       <FeaturedProjects />
       <HowIWork />
       <Testimonials />
+      <Pricing />
+      <TechnicalExpertise />
       <ContactSection />
       <Footer />
 

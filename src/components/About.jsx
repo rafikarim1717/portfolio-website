@@ -6,17 +6,15 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const aboutIntro = {
   id: {
-    title: "Dibangun untuk Berkembang. Disesuaikan dengan Kebutuhan Anda.",
+    title: "Website yang Tumbuh Bareng Bisnis Lo.",
     paragraphs: [
-      "Halo! Saya Rafi, Web Developer dengan 5+ tahun pengalaman di enterprise development (sebelumnya di BRI), sekarang membantu pemilik bisnis membangun solusi yang beneran cocok buat bisnis mereka.",
-      "Saya sudah mengerjakan 24+ proyek di tiga area utama: online presence profesional, toko e-commerce, dan sistem custom yang dirancang buat menyelesaikan tantangan operasional spesifik.",
+      "Halo! Gue Rafi, web developer dengan 5+ tahun pengalaman ngerjain sistem buat BUMN & bank nasional. Sekarang gue bantu pemilik bisnis bikin website yang beneran kepake: udah 24+ proyek, dari website bisnis, toko online, sampai sistem custom.",
     ],
   },
   en: {
     title: "Built for Growth. Tailored to Your Needs.",
     paragraphs: [
-      "Hi! I'm Rafi, a Web Developer with 5+ years in enterprise development (previously at BRI) and now helping business owners build solutions that actually work for their business.",
-      "I've delivered 24+ projects across three main areas: professional online presence, e-commerce stores, and custom systems designed to solve specific operational challenges.",
+      "Hi! I'm Rafi, a web developer with 5+ years building systems for state-owned enterprises and a national bank. Now I help business owners build websites that actually work: 24+ projects so far, from business websites and online stores to custom systems.",
     ],
   },
 };
@@ -25,23 +23,23 @@ const services = [
   {
     title: { id: "Website Bisnis", en: "Business Website" },
     description: {
-      id: "Bangun kredibilitas dan hasilkan leads lewat company profile profesional atau landing page yang tinggi konversinya. Jelas, cepat diakses, dioptimalkan buat audiens Anda.",
+      id: "Company profile atau landing page yang bikin bisnis lo kelihatan kredibel dan gampang dihubungi.",
       en: "Establish credibility and generate leads with a professional company profile or high-converting landing page. Clear, fast-loading, optimized for your audience.",
     },
     icon: LayoutTemplate,
   },
   {
-    title: { id: "Toko E-Commerce", en: "E-Commerce Store" },
+    title: { id: "Toko Online", en: "E-Commerce Store" },
     description: {
-      id: "Ubah pengunjung jadi pembeli dengan toko online yang lengkap—keranjang belanja, pembayaran aman, pelacakan stok, dan manajemen pelanggan yang sudah terintegrasi.",
+      id: "Keranjang, pembayaran, stok, sampai data pelanggan. Pembeli bisa checkout sendiri tanpa harus DM.",
       en: "Turn browsers into buyers with a complete online store—shopping cart, secure payments, inventory tracking, and customer management built in.",
     },
     icon: ShoppingCart,
   },
   {
-    title: { id: "Sistem Web Custom", en: "Custom Web Systems" },
+    title: { id: "Sistem Custom", en: "Custom Web Systems" },
     description: {
-      id: "Software yang dibuat sesuai cara bisnis Anda berjalan. Contoh: sistem booking & riwayat treatment pasien untuk klinik.",
+      id: "Sistem yang ngikutin cara bisnis lo jalan. Contoh: booking & riwayat treatment pasien buat klinik.",
       en: "Software built around how your business runs. Example: a booking & patient treatment-history system for a clinic.",
     },
     icon: Settings,
@@ -57,7 +55,7 @@ const About = () => {
       <Container>
         {/* Intro */}
         <div className="text-center mb-20">
-          <h2 className="font-title font-bold text-3xl lg:text-4xl text-ink tracking-tight mb-6">
+          <h2 className="font-title font-bold text-3xl lg:text-4xl text-ink tracking-tight text-balance mb-6">
             {intro.title}
           </h2>
 
@@ -65,7 +63,7 @@ const About = () => {
             {intro.paragraphs.map((text, index) => (
               <p
                 key={index}
-                className={`text-base lg:text-lg text-muted font-body font-normal leading-relaxed ${
+                className={`text-base lg:text-lg text-muted font-body font-normal leading-relaxed text-balance ${
                   index !== intro.paragraphs.length - 1 ? "mb-6" : ""
                 }`}
               >

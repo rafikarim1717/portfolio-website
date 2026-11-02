@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const SECTION_TEXT = {
   id: {
-    heading: "Cara Saya Bekerja",
+    heading: "Cara Gue Kerja",
     subheading:
       "Proses yang jelas dan dibangun di atas komunikasi terbuka dan progres yang stabil — dari obrolan pertama sampai support setelah launching.",
   },
@@ -21,7 +21,7 @@ const steps = [
     number: "01",
     title: { id: "Pahami", en: "Understand" },
     description: {
-      id: "Saya mulai dengan menggali tujuan bisnis, alur kerja, dan pain point Anda — bukan cuma requirement di atas kertas — biar solusinya beneran cocok sama cara Anda beroperasi.",
+      id: "Gue mulai dengan gali tujuan bisnis, alur kerja, dan pain point lo — bukan cuma requirement di atas kertas — biar solusinya beneran cocok sama cara bisnis lo jalan.",
       en: "I start by digging into your business goals, workflows, and pain points — not just requirements on paper — so the solution actually fits how you operate.",
     },
   },
@@ -29,7 +29,7 @@ const steps = [
     number: "02",
     title: { id: "Desain", en: "Design" },
     description: {
-      id: "Saya memetakan arsitektur, alur data, dan UI sebelum menulis satu baris kode pun, direncanakan buat scalability dan kemudahan maintenance sejak hari pertama.",
+      id: "Gue petain arsitektur, alur data, dan UI sebelum menulis satu baris kode pun, direncanakan buat scalability dan kemudahan maintenance sejak hari pertama.",
       en: "I map out the architecture, data flow, and UI before writing a single line of code, planning for scale and maintainability from day one.",
     },
   },
@@ -37,7 +37,7 @@ const steps = [
     number: "03",
     title: { id: "Uji & Iterasi", en: "Test & Iterate" },
     description: {
-      id: "Saya bangun feedback loop yang ketat — testing sejak awal, menangkap masalah dengan cepat, dan menyempurnakan berdasarkan penggunaan nyata, bukan asumsi.",
+      id: "Gue bangun feedback loop yang ketat — testing sejak awal, menangkap masalah dengan cepat, dan menyempurnakan berdasarkan penggunaan nyata, bukan asumsi.",
       en: "I build in tight feedback loops — testing early, catching issues fast, and refining based on real usage instead of assumptions.",
     },
   },
@@ -45,7 +45,7 @@ const steps = [
     number: "04",
     title: { id: "Rilis & Support", en: "Deliver & Support" },
     description: {
-      id: "Saya deliver sistem yang siap produksi dan tetap mendampingi setelah launching buat perbaikan, penyesuaian, dan iterasi lanjutan seiring bisnis Anda berkembang.",
+      id: "Gue deliver sistem yang siap produksi dan tetap dampingin setelah launching buat perbaikan, penyesuaian, dan iterasi lanjutan seiring bisnis lo berkembang.",
       en: "I ship production-ready systems and stay on after launch for fixes, tweaks, and future iterations as your business grows.",
     },
   },

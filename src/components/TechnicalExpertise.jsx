@@ -7,7 +7,7 @@ const SECTION_TEXT = {
   id: {
     heading: "Fondasi Teknis",
     subheading:
-      "Teknologi inti yang saya pakai buat membangun sistem yang reliable dan bisa diandalkan.",
+      "Teknologi inti yang gue pakai buat membangun sistem yang reliable dan bisa diandalkan.",
   },
   en: {
     heading: "Technical Foundation",

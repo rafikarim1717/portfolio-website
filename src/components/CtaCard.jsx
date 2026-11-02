@@ -3,14 +3,14 @@
 import { useLanguage } from "@/context/LanguageContext";
 
 const WHATSAPP_HREF =
-  "https://wa.me/6287879206730?text=Hi%20Rafi,%20saya%20tertarik%20dengan%20layanan%20web%20development%20Anda.";
+  "https://wa.me/6287879206730?text=Halo%20Rafi,%20mau%20tanya%20soal%20jasa%20website.";
 
 const TEXT = {
   id: {
-    title: "Siap untuk Solusi Custom Anda?",
+    title: "Siap Bikin Solusi Buat Bisnis Lo?",
     description:
-      "Transformasikan bisnis Anda dengan sistem berperforma tinggi dan arsitektur modern. Mari bangun sesuatu yang luar biasa bersama.",
-    cta: "Mulai Proyek Anda",
+      "Bikin bisnis lo jalan lebih rapi dengan sistem yang cepat dan modern. Yuk, kita bangun bareng.",
+    cta: "Mulai Proyek Lo",
   },
   en: {
     title: "Ready for Your Custom Solution?",

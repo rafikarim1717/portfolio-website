@@ -40,8 +40,8 @@ const contactData = [
       en: "Flexible Hours, Fast Response",
     },
     description: {
-      id: "Turnaround cepat buat klien internasional",
-      en: "Quick turnaround for international clients",
+      id: "Fast response lewat WhatsApp",
+      en: "Fast response via WhatsApp",
     },
     icon: Clock,
     color: "text-primary",

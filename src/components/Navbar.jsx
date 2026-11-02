@@ -9,8 +9,9 @@ import { useLanguage } from "@/context/LanguageContext";
 const navLinks = [
   { name: { id: "Beranda", en: "Home" }, href: "/#home", id: "home" },
   { name: { id: "Tentang", en: "About" }, href: "/#about", id: "about" },
-  { name: { id: "Keahlian", en: "Skills" }, href: "/#skills", id: "skills" },
   { name: { id: "Proyek", en: "Projects" }, href: "/#projects", id: "projects" },
+  { name: { id: "Harga", en: "Pricing" }, href: "/#pricing", id: "pricing" },
+  { name: { id: "Keahlian", en: "Skills" }, href: "/#skills", id: "skills" },
   // { name: { id: "Blog", en: "Blog" }, href: "/#blog", id: "blog" },
   // { name: { id: "Kontak", en: "Contact" }, href: "/#contact", id: "contact" },
 ];

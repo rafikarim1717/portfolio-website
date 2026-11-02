@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Star } from "lucide-react";
 import Container from "@/components/Container";
 import { projects } from "@/data/projects";
 import { useLanguage } from "@/context/LanguageContext";
@@ -10,7 +9,7 @@ const SECTION_TEXT = {
   id: {
     heading: "Kata Klien",
     subheading:
-      "Feedback nyata dari bisnis yang pernah bekerja sama dengan saya — bukan sekadar klaim, tapi hasil yang beneran mereka rasakan.",
+      "Feedback nyata dari bisnis yang pernah kerja bareng gue — bukan sekadar klaim, tapi hasil yang beneran mereka rasakan.",
   },
   en: {
     heading: "What Clients Say",
@@ -53,7 +52,7 @@ const Testimonials = () => {
                 cursor-default
               "
             >
-              {/* Header: client logo + rating */}
+              {/* Header: client logo */}
               <div className="flex items-center justify-between gap-4">
                 <div className="relative h-10 w-28 shrink-0">
                   <Image
@@ -64,12 +63,6 @@ const Testimonials = () => {
                   />
                 </div>
 
-                <div className="flex items-center gap-1 shrink-0">
-                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  <span className="font-title font-semibold text-sm text-ink">
-                    {testimonial.rating}
-                  </span>
-                </div>
               </div>
 
               <p className="font-body text-[15px] text-ink leading-relaxed flex-grow">

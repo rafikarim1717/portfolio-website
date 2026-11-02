@@ -6,9 +6,9 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const HERO_DATA = {
   id: {
-    title: "Website Anda Harus Mencerminkan Bisnis Anda",
+    title: "Website Lo Harus Mencerminkan Bisnis Lo",
     description:
-      "Kebanyakan bisnis belum punya kehadiran online, atau punya website yang gak berfungsi—susah dinavigasi, desainnya kurang oke, atau gagal mengonversi pengunjung. Saya bikin website yang beneran menyelesaikan masalah ini: profesional, jelas, dan dirancang buat mendorong pertumbuhan bisnis dan kredibilitas.",
+      "Kebanyakan bisnis belum punya kehadiran online, atau punya website yang gak berfungsi—susah dinavigasi, desainnya kurang oke, atau gagal mengonversi pengunjung. Gue bikin website yang beneran nyelesaiin masalah ini: profesional, jelas, dan dirancang buat mendorong pertumbuhan bisnis dan kredibilitas.",
     ctaDesktop: "Chat via WhatsApp",
   },
   en: {
@@ -23,7 +23,7 @@ const role = "Web Developer · Jakarta";
 
 const cta = {
   mobileLabel: "WhatsApp",
-  href: "https://wa.me/6287879206730?text=Hi%20Rafi,%20saya%20tertarik%20dengan%20layanan%20web%20development%20Anda.",
+  href: "https://wa.me/6287879206730?text=Halo%20Rafi,%20mau%20tanya%20soal%20jasa%20website.",
   icon: MessageCircle,
 };
 
