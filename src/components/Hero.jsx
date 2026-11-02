@@ -12,7 +12,7 @@ const HERO_DATA = {
     stats: [
       { value: "24+", label: "Proyek" },
       { value: "5+", label: "Tahun" },
-      { value: "BUMN & Enterprise", label: "Pengalaman" },
+      { value: "Enterprise", label: "Pengalaman" },
     ],
     ctaDesktop: "Chat via WhatsApp",
   },
@@ -23,7 +23,7 @@ const HERO_DATA = {
     stats: [
       { value: "24+", label: "Projects" },
       { value: "5+", label: "Years" },
-      { value: "SOE & Enterprise", label: "Experience" },
+      { value: "Enterprise", label: "Experience" },
     ],
     ctaDesktop: "Message on WhatsApp",
   },
