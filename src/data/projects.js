@@ -27,8 +27,8 @@ export const projects = [
     },
     testimonial: {
       quote: {
-        id: "Rafi dan tim Websync sangat responsif dan memahami kebutuhan kami, bahkan saat revisi berkali-kali mereka selalu siap membantu. Kami sangat puas dengan hasil akhirnya.",
-        en: "Rafi and the Websync team were incredibly responsive and understood exactly what we needed — even through multiple rounds of revisions, they were always ready to help. We're very happy with the final result.",
+        id: "Rafi sangat responsif dan memahami kebutuhan kami, bahkan saat revisi berkali-kali selalu siap membantu. Kami sangat puas dengan hasil akhirnya.",
+        en: "Rafi was incredibly responsive and understood exactly what we needed — even through multiple rounds of revisions, he was always ready to help. We're very happy with the final result.",
       },
       name: "Seven Retail",
       role: { id: "House of Brands", en: "House of Brands" },
@@ -195,8 +195,8 @@ export const projects = [
     location: "Jakarta, Indonesia",
     techStack: ["React", "Static HTML"],
     challenge: {
-      id: "Ini adalah proyek dummy yang dibangun buat mendemonstrasikan bagaimana Websync mendekati skenario umum: klinik estetika yang baru buka dengan online presence nol, yang perlu mendapat kepercayaan dari orang asing sebelum mereka mau booking treatment yang belum pernah mereka coba. Klinik baru menghadapi masalah spesifik — pengunjung gak cuma mau lihat daftar layanan, mereka butuh tiap treatment dijelaskan dengan jelas (apa itu, bagaimana cara kerjanya, buat siapa) sebelum mereka merasa nyaman buat booking.",
-      en: "This is a dummy project built to demonstrate how Websync approaches a common scenario: a newly-opened aesthetic clinic with zero online presence, needing to earn trust from complete strangers before they'll book a treatment they've never tried. New clinics face a specific problem — visitors don't just want a list of services, they need each treatment explained clearly (what it is, how it works, who it's for) before they'll feel comfortable booking.",
+      id: "Ini adalah proyek dummy yang dibangun buat mendemonstrasikan bagaimana gue mendekati skenario umum: klinik estetika yang baru buka dengan online presence nol, yang perlu mendapat kepercayaan dari orang asing sebelum mereka mau booking treatment yang belum pernah mereka coba. Klinik baru menghadapi masalah spesifik — pengunjung gak cuma mau lihat daftar layanan, mereka butuh tiap treatment dijelaskan dengan jelas (apa itu, bagaimana cara kerjanya, buat siapa) sebelum mereka merasa nyaman buat booking.",
+      en: "This is a dummy project built to demonstrate how I approach a common scenario: a newly-opened aesthetic clinic with zero online presence, needing to earn trust from complete strangers before they'll book a treatment they've never tried. New clinics face a specific problem — visitors don't just want a list of services, they need each treatment explained clearly (what it is, how it works, who it's for) before they'll feel comfortable booking.",
     },
     solution: {
       id: "Kami merancang website multi-halaman lengkap di sekitar kebutuhan membangun kepercayaan itu: homepage dan halaman About yang mengenalkan cerita klinik, visi, dan para dokter; hub Treatments khusus yang menghubungkan ke enam halaman treatment individual, masing-masing mengikuti struktur yang sama — manfaat, proses langkah demi langkah, siapa yang cocok, dan mini-FAQ — supaya pengunjung dapat jawaban nyata tanpa perlu bertanya; ditambah halaman FAQ umum dan halaman Contact dengan CTA WhatsApp buat booking instan. Seluruh website itu statis, HTML self-contained dengan React yang di-bundle inline, jadi jalan tanpa server atau build setup sama sekali.",

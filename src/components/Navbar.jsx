@@ -62,7 +62,7 @@ const Navbar = () => {
     }`;
 
   const mobileNavItemClass = (id) =>
-    `block px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-50 ${
+    `flex items-center min-h-11 px-4 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-50 ${
       active === id
         ? "text-primary bg-tint"
         : "text-slate-500 hover:text-slate-900"
@@ -83,7 +83,7 @@ const Navbar = () => {
             {/* Link ini supaya kalau logo diklik balik ke home */}
             <Link
               href="/"
-              className="flex items-center gap-2.5 font-title font-bold text-[17px] tracking-tight text-ink transition-transform active:scale-95"
+              className="flex items-center gap-2.5 min-h-11 font-title font-bold text-[17px] tracking-tight text-ink transition-transform active:scale-95"
             >
               <Image
                 src="/android-icon-96x96.png"
@@ -115,7 +115,7 @@ const Navbar = () => {
           <div className="flex items-center justify-end gap-3 lg:gap-5">
             <button
               onClick={toggleLang}
-              className="text-[13px] font-medium font-body text-slate-400 hover:text-ink transition-colors cursor-pointer"
+              className="inline-flex items-center justify-center min-h-11 min-w-11 px-1 text-[13px] font-medium font-body text-slate-400 hover:text-ink transition-colors cursor-pointer"
               aria-label={
                 lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"
               }
@@ -135,7 +135,7 @@ const Navbar = () => {
             </a>
 
             <button
-              className="lg:hidden p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-transform active:scale-90"
+              className="lg:hidden inline-flex items-center justify-center w-11 h-11 text-slate-500 hover:bg-slate-100 rounded-lg transition-transform active:scale-90"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
@@ -178,7 +178,7 @@ const Navbar = () => {
 
             <button
               onClick={toggleLang}
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-50 text-slate-500 hover:text-slate-900"
+              className="flex items-center gap-1.5 min-h-11 px-4 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-50 text-slate-500 hover:text-slate-900"
             >
               <Languages className="w-4 h-4" />
               {lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"}

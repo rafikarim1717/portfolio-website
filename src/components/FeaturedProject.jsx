@@ -109,7 +109,7 @@ const FeaturedProjects = () => {
                 </div>
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="mt-auto pt-5 border-t border-slate-100 inline-flex items-center gap-1.5 text-sm font-semibold font-title text-primary hover:gap-2.5 transition-all"
+                  className="mt-auto pt-5 pb-1 min-h-11 border-t border-slate-100 inline-flex items-center gap-1.5 text-sm font-semibold font-title text-primary hover:gap-2.5 transition-all"
                 >
                   {t.viewCaseStudy}
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -124,7 +124,7 @@ const FeaturedProjects = () => {
           <div className="flex justify-center mt-12">
             <button
               onClick={showMoreProjects}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 bg-primary hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95 h-10 rounded-lg px-6 text-white outline-none focus-visible:ring-2 focus-visible:ring-primary/50 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 bg-primary hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 active:scale-95 h-11 rounded-lg px-6 text-white outline-none focus-visible:ring-2 focus-visible:ring-primary/50 cursor-pointer"
             >
               {t.loadMore}
             </button>

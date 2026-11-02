@@ -40,12 +40,12 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
               className="
-                group flex flex-col gap-6 p-6 rounded-xl h-full border
+                group flex flex-col gap-6 p-6 rounded-xl border w-full md:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)]
                 bg-white border-slate-200
                 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10
                 hover:-translate-y-1.5 transition-all duration-300 ease-out
@@ -54,12 +54,12 @@ const Testimonials = () => {
             >
               {/* Header: client logo */}
               <div className="flex items-center justify-between gap-4">
-                <div className="relative h-10 w-28 shrink-0">
+                <div className="relative h-8 w-28 shrink-0">
                   <Image
                     src={testimonial.clientLogo}
                     alt={`${testimonial.name} logo`}
                     fill
-                    className="object-contain object-left"
+                    className="object-contain object-left grayscale contrast-125 opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:contrast-100 group-hover:opacity-100"
                   />
                 </div>
 
