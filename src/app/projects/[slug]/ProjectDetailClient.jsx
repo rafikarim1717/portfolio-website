@@ -270,10 +270,14 @@ const ProjectDetailClient = ({ project }) => {
                   dir === "next" ? "sm:items-end sm:text-right" : ""
                 }`}
               >
-                <span className="inline-flex items-center gap-1.5 font-body text-[13px] text-muted">
-                  {dir === "prev" && <ArrowLeft className="w-3.5 h-3.5" />}
+                <span className="inline-flex items-center gap-1.5 font-body font-medium text-[13px] text-primary">
+                  {dir === "prev" && (
+                    <ArrowLeft className="w-3.5 h-3.5 transition-transform duration-300 group-hover:-translate-x-1" />
+                  )}
                   {label}
-                  {dir === "next" && <ArrowRight className="w-3.5 h-3.5" />}
+                  {dir === "next" && (
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  )}
                 </span>
                 <span className="font-title font-semibold text-[17px] text-ink group-hover:text-primary transition-colors">
                   {p.title}
