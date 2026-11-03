@@ -28,9 +28,9 @@ const Footer = () => {
   const { lang } = useLanguage();
 
   return (
-    <footer className="bg-surface pb-24 sm:pb-10">
+    <footer className="bg-surface pt-4 pb-24 sm:pb-4">
       <Container>
-        <div className="border-t border-line pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-muted font-medium">
               © {currentYear} {FOOTER_DATA.brand.name} – Web Developer.{" "}
